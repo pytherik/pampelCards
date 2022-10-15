@@ -6,8 +6,9 @@ Social Media, Vernetzung der Nutzer untereinander
 
 
 S.M.A.R.T. oder SMART
-Self-Monitoring, Analysis and Reporting Technology
 
+Self-Monitoring, Analysis and Reporting Technology
+~
 Überwachungssystem für HDD, SSD, eMMC Festplatten bzw. Laufwerken.
 - Temperatur
 - Laufleistung usw.
@@ -16,8 +17,9 @@ Zur Vermeidung von Datenverlust und Systemabsturz, warnt den Benutzer.
 
 
 ECC
-Error Correction Code 
 
+Error Correction Code 
+~
 Erkennt 1-bit und 2-bit -Fehler und kann Einzelbit-Fehler korrigieren.
 Multibitfehler nicht zuverlässig.
 Muss in Servern verwendet werden.
@@ -29,3 +31,50 @@ Extranet
 Komponente des Intranets. Stellt Informationen für legitimierte Gruppen
 bereit. Z.B. für Unternehmen, Kunden, Partner, nicht aber allgemeine Öffent-
 lichkeit.
+
+
+
+QoS
+
+Quality of Service
+~
+Beschreibt die Güte eines Kommunikationsdienstes aus der Sicht
+des Anwenders.
+Maßnahmen und Verfahren zur Verbesserung von Netzwerkdiensten.
+- Verbindungsqualität
+- Erreichbarkeit
+durch Portpriorisierung, Bandreitenmanagement usw, jedoch nicht 
+flächendeckend einsetzbar.
+
+
+
+Codec
+
+Codiert, decodiert und komprimiert Audio-, Video-, Bilddateien
+und auch Signale.
+Digitalisierung von Analogsignalen ist nicht Verlustfrei, kann bei
+der Decodierung zur Beeinträchtigung der Ton- und Bildqualität 
+führen.
+
+
+
+Latenz
+
+Delay, Latenzzeit, Wartezeit
+~
+Entsteht durch Verarbeitungsverzögerung eines Signals aber auch 
+durch Ausbreitungsverzögerung in Leitungen oder Luft.
+(Signallaufzeiten)
+
+
+
+Load Balancer
+
+Lastverteilung
+~
+Ist ein Server, der den kommunizierenden Port eines Systems
+auf die angeschlossenen Server aufteilt.
+Verteilung von Tasks (Aufgaben) auf alle verfügbaren digitalen 
+Ressourcen zu deren optimaler Ausnutzung. Beschleunigung der 
+Request-Response-Zeiten der beteiligten Parteien.
+Erhöht auch die Sicherheit des Systems (da er dem System vorgeschaltet ist).

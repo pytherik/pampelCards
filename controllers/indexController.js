@@ -1,9 +1,9 @@
 const cards = require('../models/karten');
 
 function welcome(req, res) {
-  // res.send(`<h1>Alles klar</h1>`)
-  const randomCard = cards[Math.round(Math.random() * cards.length)]
-
+  const num = Math.floor(Math.random() * cards.length)
+  const randomCard = cards[num]
+  // console.log(num);
   res.render('index', {
     header: 'Lernen mit PampelCards',
     title: 'PampelCards App',

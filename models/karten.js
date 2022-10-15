@@ -3,7 +3,7 @@ const fs = require('fs');
 let kartei;
 let karray = [];
 let cards = [];
-let card = {"question": String, "answer": []};
+let card = {"id": cards.length, "owner": "Erik", "category": "PC-Grundlagen", "question": String, "answer": [], "createdAt": new Date()};
 let nl = false;
 
 function read(file) {
@@ -28,7 +28,7 @@ function read(file) {
         if (line === '') {
           nl = !nl;
           cards.push(card);
-          card = {"question": [], "answer": [] }
+          card = {"id": cards.length, "owner": "Erik", "category": "PC-Grundlagen", "question": String, "answer": [], "createdAt": new Date()};
           return;
         }
         card.answer.push(line);
@@ -37,7 +37,7 @@ function read(file) {
   });  
 }
 
-read('karteikarten.txt')
+read('kartei_part.txt');
 
 
 module.exports = cards;

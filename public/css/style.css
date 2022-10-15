@@ -38,7 +38,8 @@ a:hover {
 }
 
 .pCard {
+  margin: 0 10%;
   border: 1px solid #e9dfad88;
   border-radius: 5%;
-  padding: %;
+  padding: 2%;
 }

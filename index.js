@@ -1,5 +1,6 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
+// const mongoose = require('./connectDB');
 const path = require('path');
 const app = express();
 
@@ -17,11 +18,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexController.welcome);
-
-
-
-
-
 
 
 const PORT = process.env.PORT || 5000;
