@@ -1,0 +1,31 @@
+WEB 2.0
+
+Wandel vom rein statischen Internet zu interaktiver Nutzung desselben
+Social Media, Vernetzung der Nutzer untereinander
+
+
+
+S.M.A.R.T. oder SMART
+Self-Monitoring, Analysis and Reporting Technology
+
+Überwachungssystem für HDD, SSD, eMMC Festplatten bzw. Laufwerken.
+- Temperatur
+- Laufleistung usw.
+Zur Vermeidung von Datenverlust und Systemabsturz, warnt den Benutzer.
+
+
+
+ECC
+Error Correction Code 
+
+Erkennt 1-bit und 2-bit -Fehler und kann Einzelbit-Fehler korrigieren.
+Multibitfehler nicht zuverlässig.
+Muss in Servern verwendet werden.
+
+
+
+Extranet
+
+Komponente des Intranets. Stellt Informationen für legitimierte Gruppen
+bereit. Z.B. für Unternehmen, Kunden, Partner, nicht aber allgemeine Öffent-
+lichkeit.

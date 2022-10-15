@@ -1,0 +1,1243 @@
+WEB 2.0
+
+Wandel vom rein statischen Internet zu interaktiver Nutzung desselben
+Social Media, Vernetzung der Nutzer untereinander
+
+
+
+S.M.A.R.T. oder SMART
+
+Self-Monitoring, Analysis and Reporting Technology
+~
+Überwachungssystem für HDD, SSD, eMMC Festplatten bzw. Laufwerken.
+- Temperatur
+- Laufleistung usw.
+Zur Vermeidung von Datenverlust und Systemabsturz, warnt den Benutzer.
+
+
+
+ECC
+
+Error Correction Code 
+~
+Erkennt 1-bit und 2-bit -Fehler und kann Einzelbit-Fehler korrigieren.
+Multibitfehler nicht zuverlässig.
+Muss in Servern verwendet werden.
+
+
+
+Extranet
+
+Komponente des Intranets. Stellt Informationen für legitimierte Gruppen
+bereit. Z.B. für Unternehmen, Kunden, Partner, nicht aber allgemeine Öffent-
+lichkeit.
+
+
+
+QoS
+
+Quality of Service
+~
+Beschreibt die Güte eines Kommunikationsdienstes aus der Sicht
+des Anwenders.
+Maßnahmen und Verfahren zur Verbesserung von Netzwerkdiensten.
+- Verbindungsqualität
+- Erreichbarkeit
+durch Portpriorisierung, Bandreitenmanagement usw, jedoch nicht 
+flächendeckend einsetzbar.
+
+
+
+Codec
+
+Codiert, decodiert und komprimiert Audio-, Video-, Bilddateien
+und auch Signale.
+Digitalisierung von Analogsignalen ist nicht Verlustfrei, kann bei
+der Decodierung zur Beeinträchtigung der Ton- und Bildqualität 
+führen.
+
+
+
+Latenz
+
+Delay, Latenzzeit, Wartezeit
+~
+Entsteht durch Verarbeitungsverzögerung eines Signals aber auch 
+durch Ausbreitungsverzögerung in Leitungen oder Luft.
+(Signallaufzeiten)
+
+
+
+Load Balancer
+
+Lastverteilung
+~
+Ist ein Server, der den kommunizierenden Port eines Systems
+auf die angeschlossenen Server aufteilt.
+Verteilung von Tasks (Aufgaben) auf alle verfügbaren digitalen 
+Ressourcen zu deren optimaler Ausnutzung. Beschleunigung der 
+Request-Response-Zeiten der beteiligten Parteien.
+Erhöht auch die Sicherheit des Systems (da er dem System vorgeschaltet ist).
+
+
+
+Jitter
+
+Fluktuation, Schwankung
+~
+Genauigkeitsschwankungen im Übertragungstakt (Takzittern).
+Unerwünschtes Störsignal.
+Im Netzwerk Informationsverlust durch verzögertes Eintreffen von
+Datenpaketen (Laufzeitschwankungen)
+
+
+
+Snapshot
+
+Momentaufnahme bzw. Zustandsaufnahme eines Filesystems zur späteren
+Wiederherstellung.
+
+
+
+CSV
+
+Comma- bzw. Character-Separated-Values
+~
+Standard zum Austausch von Listen und Tabellen.
+Nicht einheitlich, erste Zeile kann als Kopfzeile für Spaltennamen dienen.
+Datenfelder (Spalten)  und Datensätze (Zeilen) werden durch Zeichen getrennt.
+- Zeile: z.B. Zeilenumbruch des Betriebssystems
+- Spalte: z.B. Komma oder Semikolon bei Excel
+
+
+
+XML
+
+Extensible Markup Language
+~
+Textbasierte Auszeichnungssprache zum Speichern, Übermitteln und 
+Rekonstruieren beliebiger Daten, maschinenlesbar.
+Freier, offener Standard.
+Einfach, benutzerfreundlich, allgemeingültig, v.A. im Internet eingesetzt.
+
+
+
+IT-Sicherheit
+
+Schutz von IT-Systemen vor Schäden und Bedrohungen.
+Schutzbedürftig sind einzelene Dateien sowie Computer, Netzwerke, 
+Cloud-Dienste und ganze Rechenzentren.
+Cyber-Security --> Sicherheit für den gesamten Cyber-Raum
+
+
+
+SQL-Injection
+
+(SQL-Einschleusung)
+~
+Manipulation von Datenbanken mit eingeschleusten Datenbankbefehlen 
+über Sicherheitslücken durch nachlässig oder fehlerhaft programmierte Software.
+
+
+
+Cross-Site-Scripting (XSS)
+
+Einbringen und Weiterleitung von Scripten (meist JavaScript) an Webserver und
+Browser über nachlässig programmierte Internetseiten (Formulare), um an 
+sensible Daten zu gelangen oder im Namen Anderer Transaktionen zu tätigen.
+
+
+
+Ransomware
+
+(engl. ransom = Lösegeld)
+~
+Trojaner, der über infizierte Anhänge, Freeware, präparierte Websites den 
+Computer verschlüsselt und erst nach Zahlung eines Lösegeldes wieder 
+freigibt.
+
+
+
+Trojaner
+
+Schadcode, der über infizierte Anhänge, Freeware, präparierte Websites den
+Rechner mit Spyware, Ransomware usw. infiziert oder ihn zum Bestandteil eines
+Botnetzes machen kann, um DDoS (Distributed Denial of Service) Attacken zu
+unterstützen. 
+
+
+
+Wurm
+
+Phishing-Emails, Instant-Messages, Anhänge tragen initialen 
+Payload (Nutzlast) als Anhang mit Schadsoftware wie Ransomware usw. die
+sich selbst verfielfältigen und über Massen-Emails oder Netzwerke 
+verteilen kann.
+
+
+
+Keylogger
+
+Hard- oder softwareseitige Aufzeichnung der Tastaturaktivität, z.T.
+mit der Möglichkeit diese funk- oder netzbasiert weiterzuleiten.
+
+
+
+Brainstorming
+
+Kritik- und kommentarloses Sammeln von (verrückten) Ideen in möglichst 
+großer Menge mit anschließender Auswertung.
+~
+3 Phasen: Einleitung  -->  Ideenfindung  -->  Bewertung
+
+
+
+Mindmapping 
+
+Visuelle Darstellung von komplexen Gedanken und Ideen zu einem zentralen Thema.
+Dieses ist im Zentrum der Darstellung, während detailliertere Inhalte davon
+abzweigen und ihrerseits wieder Abzweigungen haben können.
+Dadurch werden Zusammenhänge offensichtlicher.
+
+
+
+RFID
+
+Radio-Frequency-Identification (Funkerkennung)
+~
+Technisches System zur kontaktlosen Übermittlung von Daten per Funk.
+Transponder (RFID-Tag oder RFID-Etikett) wird von RFID-Reader ausgelesen.
+
+
+
+NFC
+
+Near Field Communication
+~
+Beruht auf RFID technologie und dient im Abstand von max. 10cm zur 
+Kommunikation zwischen Geräten im
+- Card Emulation mode ,passive NFC, kann gelesen werden (Autentifizierung, 
+	Kartenzahlung usw.)
+- Reader/Writer mode aktive NFC, unidirektional, liest oder beschreibt Tags 
+	im Card Emulation mode
+- Peer-to-Peer mode (polling), bidirektional, Kommunikation der Geräte 
+	untereinander, Datenaustausch
+
+	 
+ 
+Reichweite
+
+Maximale Entfernung zwischen Sender und Empfänger ohne Kommunikationsstörung,
+Datenverlust.
+
+
+
+Dämpfung
+
+Abnahme des Signalpegels in Übertragungsmedien durch äußere Einflüsse bzw.
+zunehmender Entfernung oder Zeit.
+~
+Gering : Holz, Gips, Glas
+Mittel : Wasser, Mauerwerk
+Hoch   : Beton
+Höchste: Metall
+
+
+
+Übertragungsgeschwindigkeit 
+
+Datentransferrate, Datenrate, Datenübertragungsrate
+~
+Daten / Zeit   -->    Bits/sek, MB/s usw.
+
+
+
+Steuerelement 
+
+Bedienelement einer grafischen Benutzeroberfläche (GUI).
+- Icon (Symbol)
+- Dropdown Menu (Listenfeld)
+- Textbox (Text-Eingabefeld)
+- Combobox (Text- und Listenfeld)
+- Radio Button (Optionsfelder, nur eine Auswahl möglich)
+- Checkbox (Optionsfelder, mehrere auswählbar) 
+- Button (löst Aktion aus)
+
+
+
+Cluster Size
+
+Zuordnungseinheit (Datenträger) 
+~
+Logische Zusammenfassung mehrerer Datenblöcke eines Datenspeichers.
+Kleinste adressierbare Einheit einse Dateisystems: kleinere Dateien belegen
+midestens eine dieser Einheiten.
+Typische Clustergrößen liegen zwischen 512 und 32786 Bytes.
+
+
+
+Standleitung
+
+Leased Line, Dedizierte Leitung, Datendirektverbindung(DDV), 
+Standardfestverbindung(SFV)
+~
+Permanente Datenverbindung zweier Kommunikationspartner.
+
+
+
+SDSL
+
+Symmetric Digital Subscriber Line
+~
+Up- und Downstream sind gleich schnell. Wird z.B. bei Voice over IP Telefonie
+benötigt.
+
+
+
+ADSL
+
+Asymmetric Digital Subscriber Line
+~
+Downloadgeschwindigkeit ca. 16 MBit/sek bis 24 MBit/sek (ADSL2+) höher als 
+Upload ca. 1 MBit/sek bis 8 MBit/sek (ADSL2+).
+Hauptsächlich über Kupferkabel.
+
+
+
+VDSL
+
+Very high speed Digital Subscriber Line
+~
+Kombination aus Glasfaser (bis zum Verteilerkasten) und Kupferkabeln (bis zum 
+Hausanschluss, last mile).
+Dadurch besonders hohe Übertragungsraten:
+Downstream bis 52 MBit/sek , Upstream bis 16 MBit/sek
+
+
+
+Green IT
+
+Herstellung, Betrieb und die Entsorgung von IT-Geräten sollten 
+ressourcenschonend sein:
+- recyclebarkeit
+- geringer Energiebedarf
+- Langlebigkeit
+- Refurbishing (Wiederverwendung nach Generalüberholung)
+
+
+
+TPM
+
+Trusted Platform Module
+~
+Erweitert IT-Geräte um grundlegende Sicherheitsfunktionen wenn der Benutzer
+dies zulässt.
+Aufgaben des TPM:
+- kryptografische Schlüssel speichern
+- Daten über den (Sicherheits-)Zustand des Geräts sammeln
+- Unterstützung des Betribssystems bei kryptografischen Funktionen
+	- Festplattenverschlüsselung z.B. mit BitLocker
+- erhöhte Sicherheit beim Zugriff auf verschlüsselte Daten
+
+
+
+UEFI
+
+Unified Extensible Firmware Interface
+~
+Hat als Schnittstelle zwischen Hardware und Betriebssystem das BIOS abgelöst 
+und um eine grafische Oberfläche mit Nutzung der Maus, Secure Boot (Windows)
+und GUID-Partitionierung erweitert (MBR-Kompatibilität - Legacy Boot).
+Verantwortlich für:
+- Power On Self Test (POST)
+- Einleitung des Boots
+- Hardwarekonfiguration
+	- Overclocking
+	- Bootreihenfolge
+	- Lüftersteuerung
+
+
+
+
+Secure Boot 
+
+Funktion im UEFI zur Integritätsprüfung von Firmware-Bestandteilen wie z.B.
+dem Windows-Bootloader. Bei Manipulationen durch Malware wie Rootkits wird
+ein Sicherheitsschlüssel verändert und das System fährt nicht hoch 
+(Secure Boot Violation)
+Windows 11 setzt zwingend Secure Boot voraus.
+
+
+
+LTS
+
+Long Term Support
+~
+Langfristig unterstützte Software oder Betriebssysteme z.B. durch Sicherheits-
+updates. Stabilität und Verlässlichkeit über einen meist fest definierten 
+Mindestzeitraum.
+
+
+
+MDM
+
+Mobile Device Management
+~
+Vereinfacht Integration und Zentrale Verwaltung von mobilen Endgeräten in einem 
+Unternehmen unter Berücksichtigung der Trennung von Firmen- und Privatdaten,
+sowie der Wahrung von Sicherheitsstandards.
+Übernimmt die Verteilung, Installation und Konfiguration von Software.
+
+
+
+USB OTG
+
+On The Go
+~
+OTG bezeichnet die Fähigkeit eines USB-Ladeanschlusses am mobilen Gerät, als
+Host für Peripheriegeräte zu dienen; neben der üblichen Funktion, das Gerät
+auslesen zu können.
+
+
+
+CPU Cache
+
+Kleiner, schneller Hardware-Pufferspeicher, der von der CPU verwendet wird, 
+um die durchschnittlichen Kosten (Zeit oder Energie) für den Zugriff auf Daten 
+aus dem Hauptspeicher zu verringern.
+Näher am Prozessorkern, speichert Kopien der Daten von häufig verwendeten 
+Hauptspeicherplätzen. Meist mehrere Cache-Ebenen:
+- L1, kleinster und schnellster Cache
+- L2, größer aber langsamer als L1
+- L3, gemeinsamer (für alle CPU-Kerne) gößter und langsamster Cache,
+	gleicht zur Konsistenzerhaltung L1 und L2 ab
+
+
+
+SATA (Serial-ATA, S-ATA)
+
+Serial Advanced Technology Attachment
+~
+Serielle Anschluss-Schnittstelle (Vorgänger ATA: parallel) für Massenspeicher 
+wie Festplatten, optische Laufwerke, Wechselspeicher-Laufwerke.
+~
+Netto-Datenrate:                       offiziell:
+~
+SATA I   - 150 MB/s o. 1.2 Gbit/s      1.5 Gbit/s
+SATA II  - 300 MB/s o. 2.4 Gbit/s      3.0 Gbit/s
+SATA III - 600 MB/s o. 4.8 Gbit/s      6.0 Gbit/s
+
+
+
+Registered RAM-Modul
+
+RAM mit zusätzlichen Registern (meist zwei) zur Entlastung der Adress-Treiber-
+Leitungen und daraus resultierender Stabilisierung des Chipsatzes zu Lasten 
+der Latenz.
+
+
+
+Hyperthreading
+
+Intel Technologie zur Aufteilung eines physischen CPU-Kerns in zwei logische
+Kerne. Dadurch können mehr Threads parallel abgearbeitet werden; das steigert
+die Effizienz.
+
+
+
+Dual-/Quad-Channel
+
+Leistungssteigerung durch Erhöhung der Datentransferrate über das parallele
+Betreiben von zwei bzw. vier RAM-Modulen gleicher Kapazität mittels dazu 
+befähigter Chipsätze und Speicher-Controller.
+
+
+
+User Agent
+
+Informationen (Art, Versionsnr.) eines Browsers oder Such-Robots über eine 
+im Request-Header enthaltene Zeichenkette an einen Web-Server. 
+
+
+
+LTO
+
+Linear Tape Open
+~
+Von HP, IBM und Seagate gemeinschaftlich erarbeitete Spezifikation von ½-Zoll
+Bandlaufwerken.
+LTO-Laufwerke werden zur Datensicherung und Archivierung eingesetzt.
+
+
+
+ErP
+
+Energy-related Products
+~
+Ökodesign-Richtlinie (CE-Kennzeichnung), mit dem Ziel der Reduzierung des 
+Energieverbrauchs entlang der gesamten Lieferkette: vom Design über Produktion,  
+Transport, Verpackung usw. 
+
+
+
+
+Captcha Code
+
+Completely automated public Turing-Test to tell computers and humans apart
+~
+Vollautomatischer öffentlicher Turing-Test zur Unterscheidung von Computern
+und Menschen.
+
+
+
+IoT
+
+Internet of Things
+~
+Vernetzung von physischen Objekten zur Automation von Aufgaben, sensorischen 
+Vermessungen und Datensammlung im privaten sowie im industriellen Bereich.
+
+
+
+GUI
+
+Graphical User Interface
+~
+Grafische Oberfläche zur Bedienung einer Software oder eines Betribssystems
+mithilfe von -> Steuerelementen und der Maus.
+
+
+
+BYOD
+
+Bring Your Own Device
+~
+Nutzung privater, mobiler Endgeräte der Angestellten im Netzwerk eines 
+Unternehmens. Meist moderner und Leistungsfähiger als die Bestände einer Firma.
+Dadurch Effizienzsteigerung und Schonung der Frustrationstoleranz der
+Mitarbeiter.
+
+
+
+Verbindlichkeit
+
+Der Urheber soll nicht abstreiten können, dass er auch der Urheber der Daten
+oder Nachrichten ist.
+
+
+
+Vertraulichkeit
+
+Confidentiality
+~
+Es soll sichergestellt sein, dass wirklich nur der die Nachricht empfängt und
+lesen kann, für den sie auch bestimmt war.
+
+
+
+Integrität
+
+Der Empfänger soll feststellen können, ob die Daten oder die Nachricht nach 
+ihrer Erzeugung verändert wurden.
+
+
+
+VoIP
+
+Voice over Internet-Protocol
+~
+Sprache und Steuerinformationen (z.B. über den Aufbau einer Verbindung) werden
+über ein Datennetz übertragen.
+Kann herkömmliche Telefonie ersetzen, wobei spezielle Telefoniegeräte oder 
+Adapter benötigt werden.
+
+
+
+Patchpanel
+
+auch Rangierfeld, Patchfeld
+~
+Verbindungselement mit mehreren Ports zur Zusammenführung von 
+Netzwerk-Verlegekabeln an zentraler Stelle.
+
+
+
+LSA-Werkzeug
+
+Löt-, schraub- und abisolierfreies Auflegewerkzeug
+~
+Zum direkten Eindrücken der Adern von Netzwerkkabeln in die Schneidklemmen von 
+Patchpanelen oder Netzwerkdosen.
+
+
+
+Crimpzange
+
+Schafft eine schwer zu lösende Crimpverbindung.
+~
+Crimpen: Zusammenfügen zweier Komponenten durch plastische Verformung.
+Fügeverfahren: Bördeln, Quetschen, Falten
+
+
+
+CAT-Kabel (Category)
+
+Standardkabel zur Datenübertragung.
+Twisted-Pair-Kabel aus isolierten, paarweise verdrillten Kupferkabeln.
+
+
+
+Kernel
+
+Grundlegende Funktionalitäten wie Prozess-, Speicher-, Datei-, Gerätetreiber-
+und Input/Output-Management.
+~
+Kernelarten:
+- Monolithisch: übernimmt so viele Aufgaben wie möglich (älter)
+- Mikrokernel : delegiert die meisten Aufgaben an Prozesse, die wie gewöhnliche
+	Anwendungsprogramme im Benutzermodus laufen (moderner)
+- Hybridkernel: Kernel bindet je nach Bedarf modulare Gerätetreiber ein und
+	entfernt sie auch wieder (wichtig bei Hot-Plugging)
+
+
+
+
+Kernelmodus
+
+Prozesse dürfen nicht durch Prozesse im Benutzermodus unterbrochen werden,
+können aber über den Task-Scheduler freiwillig die Kontrolle abgeben.
+Hardware-Interrupts, Dateien öffnen und schliessen oder Speicherverwaltung
+sind typische Prozesse im Kernelmodus.
+
+
+
+Benutzermodus
+
+Prozesse können jederzeit durch Hardware-Interrupts, aufwachende Kernelprozesse
+oder eigene Aufrufe von Kernelprozessen unterbrochen werden.
+
+
+
+Kooperatives Multitasking
+
+Veraltet.
+Prozesse entscheiden selbst, wann sie die Kontrolle an das Betriebssystem
+zurückgeben. Programmabstürze machen sehr wahrscheinlich das gesamte System
+instabil (Systemabsturz möglich).
+
+
+
+Präemptives Multitasking
+
+Modern.
+Betriebssystem weist den Prozessen (deren Threads) über den Scheduler Rechen-
+zeit zu und behält so selbst die Kontrolle über die Abläufe.
+Bei einem Programmabsturz ist das System meist nicht selbst absturzgefährdet.
+
+
+
+Sequenzieller und wahlfreier Zugriff 
+
+(sequential, random access) 
+~
+Verarbeitung der Informationen der Reihe nach (sequentiell)
+Mit Random Access kann jeder beliebige Punkt adressiert werden (RAM, SSD).
+
+
+
+Gerätetreiber
+
+Programm, das dem Betriebssystem die für die Steuerung einer Hardware nötigen
+Informationen liefert.
+Für das Betriebssystem, das ein neues Gerät betreiben soll, muss Treibersoft-
+ware verfügbar sein.
+
+
+
+Systemprogramme
+
+Steuern gemeinsam sämtliche Abläufe beim Betrieb eines Rechners.
+Sie stellen eine Verbindung zur Hardware her und steuern die Verwendung der 
+Ressourcen.
+Taskmanager, Dateiverwaltung usw.
+
+
+
+Anwendung
+
+Programme, die dem Benutzer eine gewünschte, nicht systemtechnische Funktio-
+nalität bieten. Sie werden beim Start von der Festplatte in den Arbeitsspeicher
+geladen.
+
+
+
+Schnittstelle für Anwendungen
+
+Durch eine Abstraktion der Hardware wird Anwendungen eine Schnittstelle 
+geboten, bei der Ressourcen universell ansprechbar sind. Dadurch kann beim
+Programmieren auf die Verwendung von Maschinensprache verzichtet werden.
+
+
+
+Systemaufruf
+
+Wenn eine Anwendung im Benutzermodus Zugriff auf die Hardware benötigt, muss
+ein Systemaufruf erfolgen.
+Kommunikationsmethode zwischen Benutzer- und Kernelmodus.
+
+
+
+
+Benutzeroberflächen
+
+Schnittstellen zur Interaktion von Mensch und Maschine.
+CLI: Textbasiert in der Kommandozeile (Terminal)
+GUI: Grafische Oberfläche, bedienbar mit Maus, Tastatur, Mikrofon, Touchgeräten
+
+
+
+Prozess
+
+Ein in den Arbeitsspeicher geladenes, ausgeführtes Programm.
+
+
+
+Task-Scheduler
+
+Teil eines Betriebssystems, der die zur Verfügung stehende Prozessorzeit
+möglichst sinnvoll auf die verschiedenen Prozesse verteilt.
+Die so für den Nutzer als gleichzeitig erscheinende Abarbeitung sehr vieler
+Prozesse nennt man Multitasking.
+
+
+
+Wartezustand eines Prozesses
+
+Aus der Sicht eines Prozesses stehen ihm exclusiv alle Ressourcen des Systems
+zur Verfügung. Das Betriebssystem sorgt im Hintergrund für deren Verteilung.
+Ein Prozess, der auf eine Ressource wartet wird in einen Wartezustand versetzt
+und später wieder aufgerufen.
+
+
+
+Deadlock
+
+Verklemmung
+~
+Ein Zustand, bei dem eine zyklische Wartesituation zwischen mehreren Prozessen
+auftritt, wobei jeder beteiligte Prozess auf die Freigabe von Betriebsmitteln
+wartet, die ein anderer beteiligter Prozess bereits exclusiv belegt hat.
+
+
+
+Threads und Speichermanagement
+
+Threads übernehmen Aufgaben, die parallel innerhalb desselben Programms 
+ausgeführt werden müssen.
+Bei der Verwendung von Threads ist es wichtig sauber zu programmieren, um
+Deadlocks und Livelocks zu vermeiden.
+
+
+
+Speicherverwaltung
+
+Hauptspeicherverwaltung:
+Verwaltung der Speicherhierarchie (in Teilen) durch das Betriebssystem. 
+Soll einen komfortablen und effizienten Zugriff auf den RAM ermöglichen.
+Dazu wird für jeden Prozess ein von der physischen Hardware entkoppelter 
+logischer virtueller Adressraum bereitgestellt, welcher von der 
+Memory Management Unit (MMU: Speicherverwaltungseinheit) auf die physischen
+Adressen abgebildet wird.
+~
+Die Verwaltung des Cache wird dagegen meist von der Hardware übernommen.
+
+
+
+Auslagerungsdatei / SWAP-Partition
+
+Bereich der Festplatte, in den hineingeschrieben wird, falls der Arbeitsspeicher
+überläuft (overflow).
+
+
+
+Memory Management Unit (MMU)
+
+Bauteil moderner Prozessoren, welches für die Speichersegmentierung vrantwort-
+lich ist. Diese ermöglicht es, mehr Speicher zu adressieren, als physikalisch
+im RAM vorhanden ist.
+Spricht ein Programm eine bestimmte Speichereinheit an, nimmt die MMU sie 
+entgegen und rechnet sie in die aktuell zugeordnete physische Speicheradresse
+um.
+
+
+
+Datei
+
+Eine Datei (file) ist ein Bestand meist inhaltlich zusammengehöriger Daten, 
+der auf einem Datenträger oder Speichermedium gespeichert ist und hauptsächlich
+anhand eines Dateinamens identifiziert wird.
+
+
+
+Dateisystem
+
+Ein Dateisystem ist eine ordnungsgebende Struktur, in der Daten abgespeichert 
+werden können. Sie beinhaltet in der Regel eine Verzeichnisstruktur, Rechte-
+verwaltung und Benutzer- und Gruppenzugehörigkeit.
+
+
+
+Virtualisierung
+
+Gleichzeitiger, paralleler Betrieb mehrerer Betriebssysteme auf einem
+physischen Computersystem. Jedes Betriebssystem hat den Zugriff auf die vorhan-
+dene Hardware.
+
+
+
+Vorteile der Virtualisierung
+
+Spart 
+Energie, Platz - eine Hardware für mehrere VMs
+Kosten         - Betriebs- und Anschaffungskosten Strom, Klimatisierung
+~
+Einfache Server-Konsolidierung - bessere Auslastung der HW-Ressourcen
+Einfache, flexible und zentrale Administration - Verwaltung, Skalierbarkeit, 
+Umzug, Datensicherung
+Plattformunabhängig - verschiedene Rechnerarchitekturen, Betriebssysteme
+
+
+
+Nachteile der Virtualisierung
+
+Hardwareausfall betrifft alle installierten VMs auf einem Virtualisierungshost.
+Sicherheitsrisiko konzentriert sich auf wenige Komponenten.
+Administratoren brauchen zusätzliches Fachwissen (Hypervisor, Virtualisierung).
+Rechenintensive und gedongelte Anwendungen laufen nicht (so gut).
+
+
+
+Hypervisor Typ 1
+
+Bare-Metal, native 
+~
+Direkt auf Hardware,ohne vorherige Installation eines OS betreibbar.
+HW-Verwalter, teilt sowohl Host- als auch Gastsystemen HW-Ressourcen zu.
+Hyper-V (Microsoft), Citrix, KVM (Linux).
+Bessere Performance bzw. Leistung, HW wird direkt angesprochen.
++ Effizient optimale Verwaltung der HW-Ressourcen.
+  Kein Betriebssystem nötig.
+- Zertifizierte Hardware nötig.
+	Bessere Hardware nötig -> höhere Kosten.
+	
+
+
+Hypervisor Typ 2
+
+hosted
+~
+Host-OS (Wirt) verwaltet die Hardware. VMs (Gastsysteme) laufen als Anwendungen
+auf dem Host-OS, von dem sie Ressourcen zugeteilt bekommen. Zugriff auf HW 
+über Host-Gerätetreiber.
++ Einfache installation.
+	Keine zertifizierte HW nötig.
+- Betriebssystem ist notwendig.
+	Schlechte Verwaltung der HW-Ressourcen, Host-Anwendunge werden bevorzugt.
+	Schlechtere Performance: schlechte Verteilung z.B. des RAM, kein direkter
+	HW-Zugriff (Treiber des Hosts werden verwendet)
+
+
+
+RAID
+
+Redundant Array of Independent (Inexpensive) Disks
+~
+Zusammenfassung mehrerer HDD o. SSD zu einem Logischen Laufwerk. I.d.R zur 
+Herstellung von Redundanz und größerem Datendurchsatz.
+Behält nach Ausfall einzelner Komponenten bis zu deren Austausch (Rebuild)
+Integrität und Funktionalität.
+Keine Datensicherung (Backup) !!!
+
+
+
+RAID 0
+
+- NSK = n * k
+- keine Redundanz
+- mindestens 2 Festplatten
+
+
+
+RAID 1
+
+- NSK = k
+- Redundanz: n - 1
+- mindestens 2 Festplatten
+
+
+
+RAID 5
+
+- NSK = (n -1) * k
+- Redundanz: 1
+- mindestens 3 Festplatten
+
+
+
+RAID 6
+
+- NSK = (n - 2) * k
+- Redundanz: 2
+- mindestens 4 Festplatten
+
+
+
+RAID 10
+
+- NSK = (n / 2) * k
+- Redundanz: 1 bis n / 2
+- mindestens 4 Festplatten (+ n * 2)
+
+
+
+JBOD
+
+Just a Bunch Of Disks
+~
+Abgrenzung zu RAID-Systemen:
+"Nur ein Haufen Festplatten", Controller ohne RAID Funktion. Werden dem OS
+einzeln zur Verfügung gestellt oder können als logisches Volume zusammenge-
+schaltet werden.
+
+
+
+Hot Swap bzw. Hot Plug
+
+heisses Tauschen bzw. Stecken
+~
+Wechselbarkeit von Systemkomponenten im laufenden Betrieb.
+
+
+
+Hot Spare
+
+Ersatzfestplatte im RAID-System im Standby. Auf ihr wird eine ausgefallene
+Festplatte des RAID-Verbundes wiederhergestellt.
+
+
+Komplettsicherung
+
+Vollbackup, normale Sicherung
+~
+Technisch einfaches Kopieren der Daten, einfaches Wiederherstellen durch zu-
+rückspielen. 
+- lange Sicherungsdauer
+- hoher Speicherbedarf
+
+
+
+Differentielles Backup
+(nach Komplettsicherung)
+
+Sicherung aller neuen und veränderten Daten seit der letzten Komplettsicherung.
++ reduzierter Speicherbedarf
++ geringere Backupdauer als Voll-Backup
+- lange Wiederherstellungsdauer
+
+
+
+Inkrementelles Backup
+(nach Komplettsicherung)
+
+Sicherung aller neuen und veränderten Daten seit der letzen inkrementellen Da-
+tensicherung (ausser bei der ersten).
++ geringster Speicherbedarf
++ geringste Backupdauer
+- Wiederherstellung benötigt alle inkr. Datens. seit letztem Voll-Backup
+- lange Wiederherstellungsdauer
+
+
+
+Backup (Planung)
+
+1. Welche Daten sollen gesichert werden
+2. Wie groß ist die Datenmenge
+3. Wie lange müssen die DS aufbewahrt werden (rechtlich, Datenzuwachs)
+4. Welches Medium nutze ich (Festplatte, Band, Cloud usw.)
+5. Wie oft und wann
+6. Welche Methode (Voll, differentiell, inkrementell)
+7. Manuelle oder automatische DS
+8. Sicherung der DS vor Zerstörung, Diebstahl (Aufbewahrungsort, Verschlüsselung)
+9. Verantwortlicher für die DS
+10. Wie lange darf die Wiederherstellung dauern (-> 6. Methode)
+11. Prüfung der Wiederherstellbarkeit der DS planen
+
+
+
+Datendeduplizierung
+
+mehr Daten auf weniger Speicherplatz erreichen
+~
+Dateien werden in Chunks (Blöcke) segmentiert und redundante Chunks durch Ver-
+weise auf identische übrigbleibende Chunks ersetzt.
+Trennung der Blöcke und Verweise in einen Container und ein Datenregister.
+
+
+
+Daten Replikation
+
+Kopieren und Speichern von Daten an mehreren Orten bzw. Servern. Je nach Anfor-
+derung einmalig oder fortlaufend (regelmäßige Aktualisierung und Abgleich mit
+der Quelle).
+
+
+
+Backup von Datenbanken
+
+Gewährleistung der Konsistenz der DB währen dem Backup durch:
+Herunterfahren der Datenbank (Offline-Modus) oder Puffern der neu hinzukommenden
+Daten während der Sicherung in einem separaten Bereich (Backup-Modus, Online-
+Modus). Der Puffer wird nach der Sicherung in die DB eingefügt.
+
+
+
+ROM verschiedene Bauarten
+
+Read Only Memory
+~
+Enthalten Firmware in Maschinencode
+P: programmable / EP: erasable, progr. 
+~
+- ROM          fest verdrahtet, nicht Programmierbar
+- PROM         kann ein einziges Mal programmiert werden
+- (E)EPROM     lösch- und programmierbar (UV-Licht, (E) elektrisch)
+- Flash-EPROM  wie andere Flash-Speicher lösch- und p.bar
+
+
+
+RAM 
+
+(Random Access Memory)
+~
+Flüchtiger Arbeitsspeicher, mit Northbridge oder CPU verbunden.
+- enthält Programme und Daten
+- Inhalt kann gelesen und bearbeitet werden
+- wahlfreier Zugriff auf Inhalte
+
+
+
+RAM Bauarten
+
+- SD-RAM - Synchronous-Dynamic-RAM
+- DDR-RAM - Double-Data-Rate-RAM
+  - doppelte Datentransferrate (Verwendung beider Signalflanken)
+- DIMM - Double-Inline-Memory-Module - gegenüberliegende Pins
+
+
+
+DDR - Generationen
+
+DDR         184 Pins      200- 400 MT/s (Mega-Transfers/sek)
+DDR2        240 Pins      400-1066 MT/s
+DDR3        240 Pins      800-2133 MT/s
+DDR4        288 Pins     1600-5333 MT/s
+DDR5        288 Pins     3200-8400 MT/s
+~
+In den meisten Fällen ist die größe des RAM wichtiger als die Zugriffszeit
+
+
+
+North- Southbridge
+
+Beide zusammen bilden den Chipsatz
+~
+- Northbridge liegt nahe bei der CPU o. ist in CPU integriert
+	-  schnellerer Datenfluss als Southbridge
+	-  Brücke zu Arbeitsspeicher, Grafikkarte, PCIe
+~
+- Southbridge verbindet N.bridge mit Peripherie
+	- PCI-Bus, ISA-Bus, ATA
+	- Brücke zu Massenspeicher, USB, Drucker usw.
+
+
+
+von Neumann Prinzipien
+
+1. Eingabewerk, Speicherwerk, Ausgabewerk, Steuerwerk, Rechenwerk
+2. Struktur eines Rechners ist unabhängig von der Problemstellung (Speicherprogrammierbarkeit)
+3. Speicher: Anweisungen (Programme) und Operanden (Daten und Variablen)
+4. Speicher: fortlaufend nummerierte Zellen gleicher Größe
+5. Binäre Codierung von Daten, Befehlen, Adressen und Steuerung
+6. Programm = Folge von Anweisungen
+7. Erweiterung der sequentiellen Bearbeitung durch Sprungbefehle
+     - unbedingter Sprung (erfolgt immer)
+     - bedingter Sprung (erfolgt wenn eine Bedingung erfüllt ist: if then else)
+
+
+
+CPU Aufbau und Funktionsweise
+
+Komponenten (Units):
+- Eingabewerk (Input Devices)
+- Speicherwerk (Main Memory - RAM, Secondary Mem - SSD, HDD, USB)
+- Ausgabewerk (Display, Printer)
+- Steuerwerk (Control Unit)
+- Rechenwerk (Arithmetic Logic Unit)
+~
+Register: 
+- Adressregister
+- Befehlsregister
+- Befehlszähler (Instruction Pointer)
+- Akkumulator (Datenregister)
+	- hier werden die Zwischenergebnisse gespeichert
+
+
+
+ESD
+
+Electro Statical Discharge
+~
+Massnahmen zum Schutz von Elektronischen Bauteilen vor ESD:
+~
+- Erdungsarmband
+- Einlegesohlen und Schuhe
+- Spezialwerkzeug
+- Antistatik Matten
+
+
+
+Eigenschutz bei Arbeiten an der Elektronik:
+
+- Strom ausschalten, Netzstecker ziehen
+- auf scharfkantige Bauteile achten (Handschuhe)
+- Stolperfallen eliminieren (herumliegende Kabel usw.)
+
+
+
+SCSI, SAS
+
+SCSI ('scuzzy' (en) oder 'scasi')
+(Small Computer Interface System)
+~
+- parallele Schnittstelle
+- für Festplatten mit schnellem Zugriff und geringer Kapazität
+- SCSI-1  - 1986 40 Mb/s (5MB/s)
+- SCSI-2  - 1990 (1994)  80Mb/s (10MB/s) - 160Mb/s (20MB/s)
+- SCSI-3  - 1995 bis zu 640MB/s (Termini: Ultra-Fast, Wide)
+~
+PROs
+- schneller Zugriff
+- geringe CPU Auslastung
+- hohe Verlässlichkeit
+- Hot-Swapping möglich
+
+
+
+SAS (Serial Attached SCSI)
+
+- seriell
+- gleicher Befehlssatz wie SCSI (gute Kompatibilität)
+- höhere Geschwindigkeit
+- - SAS-1 2004    3Gb/s
+- - SAS-2 2009    6Gb/s
+- - SAS-3 2013  12Gb/s
+- - SAS-4 2017  22,5Gb/s
+- - SAS-5 in Entwicklung 45Gb/s
+~
+PROs
+- Point-to-Point link: Geräte bekommen eigene Signalpfade für maximale Bandbreite
+- Full Duplex Mode für effektiven Datendurchsatz (Advanced Data Transmission Method)
+- mehr Verbindungsmöglichkeiten usw.
+
+
+
+SATA
+
+- optische Laufweke, Festplatten (HDD, SSD)
+- seriell, dadurch wesentlich schnellere Datenübertragung
+- keine Flachbandkabel (bessere Lüfternutzung)
+- Standards SATA I, II und III
+
+
+
+eSATA
+
+- wie SATA für externe Geräte
+
+
+
+IDE 
+
+(Integrated Drive Electronics)
+~
+- Flachbandkabel, drei Steckerleisten
+- nur zwei Festplatten anschließbar (Master & Slave)
+- 500 MB maximale FP Kapazität
+- veralteter Standard
+
+
+
+PATA (Parallel Advanced Technology Attachment)
+
+- auch AT-Bus oder EIDE (Enhanced IDE)
+- Nachfolger von IDE
+- bis zu vier Laufwerke anschließbar
+
+
+
+ATAPI (AT Attachment Package Interface)
+
+- Erweiterung des ATA-Protokolls
+- ermöglicht Übertragung gekapselter SCSI Pakete
+- Anschluss optischer Laufwerke oder Wechselfestplatten
+	- booten von optischen Laufwerken möglich
+
+
+
+HDD
+
+- Festplattenlaufwerk mit beweglichen Teilen
+- elektromagnetische Abtastung mittels Lesearm
+- sehr empfindlich gegen
+	- Stösse
+	- nach dem öffnen kaputt; schon Staub- oder
+    Rauchpartikel schädigen die Oberfläche der eingebauten
+    Disk(s)
+- gegenüber SSD langsam
+- Fragmentierung kann Probleme machen
+- gegenüber SSD beständiger (Wiederbeschreibbarkeit)
+~
+Die eingebaute(n) Disk(s) sind aufgeteilt in Sektoren, Zylinder und
+Blöcke (C(ylinder)S(ector)H(ead))
+Bei neueren Modellen sind die Blöcke einheitlich groß,
+da sonst die gespeicherten Daten gestreckt werden müssen, je
+weiter sie vom Zentrum enfernt sind
+
+
+
+SSD
+
+- Chip-Basiert (keine beweglichen Teile)
+- robust gegen Stösse
+- öffnen möglich
+- schneller als HDD
+- Fragmentierung egal, da kein mechanischer Zugriff auf Daten
+- geringere Wiederbeschreibbarkeit als HDD
+
+
+
+Firewall
+
+Verhindert nichtautorisierten Zugriff auf ein Netzwerk.
+Nach vordefinierten Regelen Datenübertragungen erlauben oder verweigern.
+
+
+
+DMZ
+
+Demilitarized Zone
+~
+Durch eine oder mehrere Firewalls abgeschirmte Systeme.
+Schützt internes Netz (LAN) vor unberechtigten Zugriffen von außen, kann
+gleichzeitig Zugriff auf öffentliche Dienste (Web-, File-, Proxy-, Emailserver)
+gestatten.

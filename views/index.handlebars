@@ -1,0 +1,18 @@
+<h4>Willkommen bei der Lern-App PampelCards.</h4>
+<div class="wrapper">
+  <div class="col-4">
+    <p>
+      Hier kannst du, nach Kategorien georndnet, 
+      mit deinen Flashcards lernen, neue Karten erstellen, usw.
+    </p>
+  </div>
+  <br class="col-4">
+    <p>
+      {{ randomCard.question }}
+    </p>
+      {{#each randomCard.answer }}
+      <span>{{this}}</span><br>
+      {{/each}}
+    </p>
+  </div>
+</div>
