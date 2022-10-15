@@ -2,8 +2,8 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const app = express();
-const cards = require('./models/karten');
 
+const indexController = require('./controllers/indexController');
 
 app.engine('handlebars', exphbs.engine({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
@@ -14,18 +14,9 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => {
-  // res.send(`<h1>Alles klar</h1>`)
-  const randomCard = cards[Math.round(Math.random() * cards.length)]
-  console.log(randomCard);
-
-  res.render('index', {
-    header: 'Lernen mit PampelCards',
-    title: 'PampelCards App',
-    randomCard
-  });
-});
+app.use('/', indexController.welcome);
 
 
 

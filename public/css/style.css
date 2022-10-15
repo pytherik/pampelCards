@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #333;
+  color: #e9dfad;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+#playNow {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #7FB77E;
+}
+
+#welcome {
+  text-align: center;
+  margin-top: 5%;
+  font-size: 4rem;
+}
+
+.index-container {
+  margin-top: 4%;
+}
+
+#flashcard {
+  width: 250px;
+  padding: 5%;
+}
+
+.pCard {
+  border: 1px solid #e9dfad88;
+  border-radius: 5%;
+  padding: %;
+}
