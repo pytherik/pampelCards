@@ -1,5 +1,5 @@
 <div class="container index-container text-center">
-  <div class="row index">
+  <div class="row">
     <div class="col">
       <h3>Willkommen bei der Lern-App PampelCards.</h3>
       <hr>
@@ -9,23 +9,19 @@
       </p>
     </div>
     <div class="col pCard">
-     <a id="playNow" href="#"><img id="flashcard" src="{{ image }}" alt="Flashcard illustration"><br>Jetzt loslegen</a>
+     <a id="playNow" href="/card"><img id="flashcard" src="{{ image }}" alt="Flashcard illustration"><br>Jetzt loslegen</a>
     </div>
     <div class="col">
       <h3>
         {{ randomCard.question }}
       </h3>
       <hr>
-        {{#each randomCard.answer }}
+        {{!-- {{#each randomCard.answer }}
         <span>{{this}}</span><br>
-        {{/each}}
+        {{/each}} --}}
+      <p>
+        {{ randomCard.answer }}
       </p>
     </div>
   </div>
 </div>
-{{!-- <div class="wrapper">
-  <div class="col-4">
-  </div>
-  <br class="col-4">
-  </div>
-</div> --}}

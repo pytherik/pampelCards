@@ -3,7 +3,15 @@ const fs = require('fs');
 let kartei;
 let karray = [];
 let cards = [];
-let card = {"id": cards.length, "owner": "Erik", "category": "PC-Grundlagen", "question": String, "answer": [], "createdAt": new Date()};
+let card = {
+  "id": cards.length,
+  "category": "PC-Grundlagen",
+  "question": String,
+  "answer": [],
+  "postedBy": "Erik",
+  "knownBy": [],
+  "createdAt": new Date()
+};
 let nl = false;
 
 function read(file) {
@@ -27,8 +35,18 @@ function read(file) {
       } else {
         if (line === '') {
           nl = !nl;
+          card.answer = card.answer.join('  ');
           cards.push(card);
-          card = {"id": cards.length, "owner": "Erik", "category": "PC-Grundlagen", "question": String, "answer": [], "createdAt": new Date()};
+          // console.log(card);
+          card = {
+            "id": cards.length,
+            "category": "PC-Grundlagen",
+            "question": String,
+            "answer": [],
+            "postedBy": "Erik",
+            "knownBy": [],
+            "createdAt": new Date()
+          };
           return;
         }
         card.answer.push(line);

@@ -5,6 +5,7 @@ const path = require('path');
 const app = express();
 
 const indexController = require('./controllers/indexController');
+const randomCardController = require('./controllers/randomCardController');
 
 app.engine('handlebars', exphbs.engine({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
@@ -17,7 +18,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexController.welcome);
+app.use('/index', indexController.welcome);
+app.use('/card', randomCardController.getRandomCard);
 
 
 const PORT = process.env.PORT || 5000;
