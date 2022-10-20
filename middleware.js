@@ -1,5 +1,5 @@
 const redirectLogin = (req, res, next) => {
-  if (!req.session.userId) {
+  if (!req.session.user) {
     res.redirect('/login');
   } else {
     next();
@@ -7,7 +7,7 @@ const redirectLogin = (req, res, next) => {
 }
 
 const redirectHome = (req, res, next) => {
-  if (req.session.userId) {
+  if (req.session.user) {
     res.redirect('/');
   } else {
     next();

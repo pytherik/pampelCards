@@ -2,7 +2,7 @@ const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
-// const mongoose = require('./connectDB');
+const mongoose = require('./connectDB');
 const path = require('path');
 
 const cards = require('./models/karten');
@@ -12,7 +12,10 @@ const app = express();
 
 const middleware = require('./middleware');
 const cardRouter = require('./routes/cardRoutes');
-const loginRouter = require('./routes/loginRoutes')
+const loginRouter = require('./routes/loginRoutes');
+const registerRouter = require('./routes/registerRoutes');
+const logoutRouter = require('./routes/logoutRoute');
+
 const {
   PORT = 3000,
   NODE_ENV = 'developement',
@@ -46,18 +49,19 @@ app.set('view engine', 'handlebars');
 app.get('/', middleware.redirectLogin, (req, res, next) => {
   const num = Math.floor(Math.random() * cards.length)
   const randomCard = cards[num]
-  // console.log(num);
+  console.log(req.session.user);
   res.render('home', {
     header: 'Lernen mit PampelCards',
     title: 'PampelCards App',
     image: 'images/icons8-card-64.png',
-    // windows path
-    // image: 'images/icons8-card-64.png',
+    user: req.session.user,
     randomCard
   });
 });
 
 app.use('/login', loginRouter);
+app.use('/register', registerRouter);
+app.use('/logout', logoutRouter);
 app.use('/card', cardRouter);
 
 

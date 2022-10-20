@@ -15,8 +15,7 @@ router.get('/', (req, res) => {
     header: 'Jetzt wird\'s ernst!',
     title: 'PampelCards App',
     image: 'images/icons8-card-64.png',
-    // windows path
-    // image: 'images/icons8-card-64.png',
+    user: req.session.user,
     randomCard
   });
 });
