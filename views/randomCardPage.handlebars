@@ -2,14 +2,15 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title" id="question">Was ist eigentlich ...</h3>
+        <h3 class="modal-title" id="question">Was weisst du über ...</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body question">
         {{ randomCard.question }}
       </div>
       <div class="modal-footer">
-        <button class="btn btn-sm btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Weiter</button>
+        <a class="btn btn-sm btn-success" href="/card">okay, weiter</a>
+        {{!-- <button class="btn btn-sm btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Weiter</button> --}}
         <button class="btn btn-sm btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Zeig erstmal</button>
         {{!-- <button class="btn btn-sm btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">zeig ma</button> --}}
       </div>
@@ -27,7 +28,7 @@
         {{{ randomCard.sanitizedHtml }}}
       </div>
       <div class="modal-footer">
-        <a class="btn btn-sm btn-info" href="/card/newCard">neue Karte</a>
+        <a class="btn btn-sm btn-info" href="/card/newCard">Karte erstellen</a>
         <a class="btn btn-sm btn-primary" href="/card/editCard/{{randomCard._id}}">Bearbeiten</a>
         <a class="btn btn-sm btn-success" href="/card">okay, wusstich</a>
         <button class="btn btn-sm btn-warning" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">nee, nee, neee</button>

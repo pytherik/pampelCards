@@ -107,6 +107,7 @@ router.get('/editCard/:id', async (req, res) => {
   // console.log('card: ', card)
   res.render('editCard', {
     user: req.session.user,
+    _id: card._id,
     category: card.category,
     question: card.question,
     description: card.description,
