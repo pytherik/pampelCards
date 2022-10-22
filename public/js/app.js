@@ -1,0 +1,1 @@
+$(".saveAndGo").click(() => location.href = "/card");

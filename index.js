@@ -1,11 +1,13 @@
 const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 const exphbs = require('express-handlebars');
 const mongoose = require('./connectDB');
 const path = require('path');
 
-const cards = require('./models/karten');
+const Cards = require('./models/cardsModel');
+
 const TWO_HOURS = 1000 * 60 * 60 * 2;
 
 const app = express();
@@ -40,23 +42,41 @@ app.use(session({
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
-
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'));
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.engine('handlebars', exphbs.engine({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
-app.get('/', middleware.redirectLogin, (req, res, next) => {
-  const num = Math.floor(Math.random() * cards.length)
-  const randomCard = cards[num]
-  console.log(req.session.user);
-  res.render('home', {
-    header: 'Lernen mit PampelCards',
-    title: 'PampelCards App',
-    image: 'images/icons8-card-64.png',
-    user: req.session.user,
-    randomCard
-  });
+app.get('/', middleware.redirectLogin, async (req, res, next) => {
+  const card = await Cards.findOne({ author: req.session.user._id });
+
+  if (!card) {
+    const randomCard = {
+      question: 'Du hast noch keine Sammlung!',
+      sanitizedHtml: '<a href="/card/newCard"><h1>Erstelle jeztz die erste Karte.</h1></a>',
+      description: ''
+    }
+    const payload = {
+      header: 'Mach Karte',
+      user: req.session.user,
+      randomCard
+    }
+    console.log('Du hast noch keine Karten erstellt.');
+    payload.header = 'Mach neue Karte'
+    return res.render('home', payload);
+  } else {
+    const cards = await Cards.find({ author: req.session.user._id }).lean();
+
+    const num = Math.floor(Math.random() * cards.length)
+    const randomCard = cards[num]
+    // console.log(req.session.user);
+    res.render('home', {
+      header: 'Lernen mit PampelCards',
+      user: req.session.user,
+      randomCard
+    });
+  }
 });
 
 app.use('/login', loginRouter);

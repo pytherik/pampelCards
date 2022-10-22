@@ -1,18 +1,35 @@
 const mongoose = require('mongoose');
+const marked = require('marked');
+const slugify = require('slugify');
+const createDomPurify = require('dompurify');
+const { JSDOM } = require('jsdom');
+const dompurify = createDomPurify(new JSDOM().window);
 
 const Schema = mongoose.Schema;
 
 const CardsSchema = new Schema({
-  category: { type: String, trim: true },
-  question: { type: String, trim: true },
-  answer: [{ type: String, trim: true }],
-  postedBy: { type: Schema.Types.ObjectId, ref: 'CardsUser' },
-  knownBy: [{ type: Schema.Types.ObjectId, ref: 'CardsUser' }],
-  replyTo: { type: Schema.Types.ObjectId, ref: 'Post' }
+  author:        { type: Schema.Types.ObjectId, ref: 'CardsUser' },
+  category:      { type: String },
+  question:      { type: String, required: true, unique: true },
+  description:   { type: String },
+  slug:          { type: String, required: true, unique: true },
+  answerMd:      { type: String, required: true },
+  sanitizedHtml: { type: String, required: true },
+  knownBy:      [{ type: Schema.Types.ObjectId, ref: 'CardsUser' }],
 }, { timestamps: true });
+
+CardsSchema.pre('validate', function (next) {
+  if (this.question) {
+    this.slug = slugify(this.question, { lower: true, strict: true })
+  }
+  if (this.answerMd) {
+    this.sanitizedHtml = dompurify.sanitize(marked.parse(this.answerMd));
+  }
+  next();
+
+})
 
 const Cards = mongoose.model('Cards', CardsSchema);
 
 module.exports = Cards;
-
 

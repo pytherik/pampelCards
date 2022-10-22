@@ -32,6 +32,10 @@ a:hover {
   font-size: 4rem;
 }
 
+#logoutIcon {
+  width: 40px;
+}
+
 .index-container {
   margin-top: 4%;
 }
@@ -48,13 +52,24 @@ a:hover {
   padding: 2%;
 }
 
-.modal-header {
+.profilePic {
+  width: 60px;
+  margin: 0 10px;
+  border-radius: 50%;
+}
+
+.modal-content {
   background-color: #777;
 }
 
-.modal-body {
-  background-color: #777;
+.modal-body.question {
+  font-size: 2.5rem;
 }
+
+.modal-body.answer {
+  font-size: 1.3rem;
+}
+
 
 .form-control,
 .form-control:focus {
@@ -66,4 +81,43 @@ a:hover {
 .errorMessage {
   font-size: 1.3rem;
   color: #FF8787;
+}
+
+.btn-success {
+  background-color: #B6E388;
+  color: #000;
+}
+
+.btn-success:hover {
+  background-color: #B6E388aa;
+  color: #000;
+}
+
+.btn-warning {
+  background-color: #FF8787;
+  color: #000;
+}
+
+.btn-warning:hover {
+  background-color: #FF8787aa;
+  color: #000;
+}
+
+.btn-primary {
+  background-color: #ABD9FF;
+  color: #000;
+}
+
+.btn-primary:hover {
+  background-color: #ABD9FFaa;
+  color: #000;
+}
+
+.form-group {
+  width: 50%;
+}
+
+.textarea {
+  height: 180px;
+  margin-bottom: 2%;
 }

@@ -12,7 +12,7 @@ const cards = require('../models/karten');
 app.use(bodyParser.urlencoded({ extended: false }));
 
 router.get('/', (req, res) => {
-  res.render('register');
+  res.render('register', { layout: 'loginLayout' });
 })
 
 router.post('/', async (req, res) => {
@@ -26,7 +26,8 @@ router.post('/', async (req, res) => {
   if (username && email && pass1 && pass2) {
     if (pass1 !== pass2) {
       payload.errorMessage = 'Die Passwörter stimmen nicht überein!';
-      return res.status(200).render('register', payload);
+      errorMessage = 'Die Passwörter stimmen nicht überein!';
+      return res.status(200).render('register', { layout: 'loginLayout', username: req.body.username, email: req.body.email, errorMessage: errorMessage });
     }
       
     const user = await User.findOne({
@@ -37,12 +38,10 @@ router.post('/', async (req, res) => {
     })
       .catch((error) => {
         console.log(error);
-        payload.errorMessage = "Irgendwas stimmt hier nicht!";
-        res.status(200).render("register", payload);
+        errorMessage = "Irgendwas stimmt hier nicht!";
+        return res.status(200).render('register', { layout: 'loginLayout', username: req.body.username, email: req.body.email, errorMessage: errorMessage });
       });
 
-    console.log(user);
-    console.log(username, email);
 
     if (user == null) {
       // no user found
@@ -59,17 +58,17 @@ router.post('/', async (req, res) => {
     else {
       // user already exists
       if (email == user.email) {
-        payload.errorMessage = "Email schon registriert!";
+        errorMessage = "Email schon registriert!";
 
       } else {
-        payload.errorMessage = "Benutzername ist schon vergeben!";
+        errorMessage = "Benutzername ist schon vergeben!";
       }
-      res.status(200).render("register", payload);  
+      res.status(200).render('register', { layout: 'loginLayout', username: req.body.username, email: req.body.email, errorMessage: errorMessage });  
     }
   }
   else {
-    payload.errorMessage = "Überprüfe deine Eingabe noch einmal!";
-    res.status(200).render("register", payload);
+    errorMessage = "Überprüfe deine Eingabe noch einmal!";
+    res.status(200).render("register", { layout: 'loginLayout', username: req.body.username, email: req.body.email, errorMessage: errorMessage });
   }
 
 })

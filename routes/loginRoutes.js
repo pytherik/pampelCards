@@ -10,11 +10,11 @@ const User = require('../models/userModel');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-router.get('/', (req, res) => {
-  res.render('login');
+router.get('/', middleware.redirectHome, (req, res, next) => {
+  res.render('login', { layout: 'loginLayout' });
 })
 
-router.post('/', async (req, res) => {
+router.post('/', middleware.redirectHome, async (req, res, next) => {
   const payload = req.body;
 
   if (req.body.username && req.body.password) {
@@ -22,10 +22,10 @@ router.post('/', async (req, res) => {
       .catch((error) => {
         console.log(error);
         payload.errorMessage = "Irgendwas stimmt hier nicht!";
-        res.status(200).render("login", payload);
+        res.status(200).render("login", { layout: 'loginLayout', payload });
       });
-    console.log(user)
-    console.log(req.body.password)
+    // console.log(user)
+    // console.log(req.body.password)
     if (user != null) {
       const result = await bcrypt.compare(req.body.password, user.password);
       
@@ -35,13 +35,13 @@ router.post('/', async (req, res) => {
       }
     }
   
-    payload.errorMessage = "Das haut nicht hin!";
-    return res.status(200).render("login", payload);
+    errorMessage = "Das haut nicht hin!";
+    return res.status(200).render('login', { layout: 'loginLayout', username: req.body.username, errorMessage: errorMessage });
   }
 
-  payload.errorMessage = "Fülle bitte beide Felder aus!";
+  errorMessage = "Fülle bitte beide Felder aus!";
 
-  res.status(200).render("login"); 
+  res.status(200).render('login', { layout: 'loginLayout', username: req.body.username, errorMessage: errorMessage });
 })
 
 module.exports = router;

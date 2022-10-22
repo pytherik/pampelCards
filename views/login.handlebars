@@ -13,11 +13,13 @@
         </div>
         <form class="" method="POST">
           <div class="form-floating mb-3">
-            <input type="text" class="form-control rounded-3" id="username" name="username" placeholder="Benutzername">
+            <input type="text" class="form-control rounded-3" id="username" 
+            name="username" placeholder="Benutzername" value="Erik">
+            {{!-- name="username" placeholder="Benutzername" value="{{ username }}"> --}}
             <label for="username">Benutzername</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="password" class="form-control rounded-3" id="Password" name="password" placeholder="Passwort">
+            <input type="password" class="form-control rounded-3" id="Password" name="password" placeholder="Passwort" value="hallowelt">
             <label for="Password">Passwort</label>
           </div>
           <button class="w-100 mb-2 btn btn-lg rounded-3 btn-success" type="submit">Login</button>

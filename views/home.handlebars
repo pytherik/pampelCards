@@ -9,18 +9,21 @@
       </p>
     </div>
     <div class="col pCard">
-     <a id="playNow" href="/card"><img id="flashcard" src="{{ image }}" alt="Flashcard illustration"><br>Jetzt loslegen</a>
+     <a id="playNow" href="/card"><img id="flashcard" src="/images/icons/joker.svg" alt="Flashcard illustration"><br>Jetzt loslegen</a>
     </div>
     <div class="col">
-      <h3>
+      <h1>
         {{ randomCard.question }}
-      </h3>
+      </h1>
+      <h4>
+        {{ randomCard.description }}
+      </h4>
       <hr>
         {{!-- {{#each randomCard.answer }}
         <span>{{this}}</span><br>
         {{/each}} --}}
       <p>
-        {{ randomCard.answer }}
+        {{{ randomCard.sanitizedHtml }}}
       </p>
     </div>
   </div>
