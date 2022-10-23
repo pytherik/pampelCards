@@ -13,10 +13,12 @@ body {
 
 a {
   text-decoration: none;
+  color: #e9dfad;
 }
 
 a:hover {
   cursor: pointer;
+  color: #fff;
 }
 
 .logReg {
@@ -61,64 +63,41 @@ a:hover {
   border-radius: 50%;
 }
 
-.modal-content {
-  background-color: #777;
-}
-
-.modal-body.question {
-  font-size: 2.5rem;
-}
-
-.modal-body.answer {
-  font-size: 1.3rem;
-}
-
-
-.form-control,
-.form-control:focus {
-  background-color: #333;
-  font-size: 1.3rem;
-  color: #e9dfad;
-}
-
 .errorMessage {
   font-size: 1.3rem;
   color: #FF8787;
 }
 
-.btn-success {
+.btn-green {
   background-color: #B6E388;
   color: #000;
 }
 
-.btn-success:hover {
+.btn-green:hover {
   background-color: #B6E388aa;
   color: #000;
 }
 
-.btn-warning {
+.btn-red {
   background-color: #FF8787;
   color: #000;
 }
 
-.btn-warning:hover {
+.btn-red:hover {
   background-color: #FF8787aa;
   color: #000;
 }
 
-.btn-primary {
+.btn-blue {
   background-color: #ABD9FF;
   color: #000;
 }
 
-.btn-primary:hover {
+.btn-blue:hover {
   background-color: #ABD9FFaa;
   color: #000;
 }
 
-.form-group {
-  width: 50%;
-}
 
 .textarea {
   height: 180px;

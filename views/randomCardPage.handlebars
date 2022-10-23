@@ -1,40 +1,27 @@
-<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="question">Was weisst du über ...</h3>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body question">
-        {{ randomCard.question }}
-      </div>
-      <div class="modal-footer">
-        <a class="btn btn-sm btn-success" href="/card">okay, weiter</a>
-        {{!-- <button class="btn btn-sm btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Weiter</button> --}}
-        <button class="btn btn-sm btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Zeig erstmal</button>
-        {{!-- <button class="btn btn-sm btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">zeig ma</button> --}}
-      </div>
-    </div>
+<div>
+  <div class="">
+    <h3 class="">Was weisst du über ...</h3>
+  </div>
+  <div class="" id="question">
+    {{ randomCard.question }}
+  </div>
+  <div class="">
+    <a class="button btn-green" href="/card">okay, weiter</a>
+    <button class="button btn-blue">Zeig erstmal</button>
   </div>
 </div>
-<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="answer">{{ randomCard.description }}</h3>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body answer">
-        {{{ randomCard.sanitizedHtml }}}
-      </div>
-      <div class="modal-footer">
-        <a class="btn btn-sm btn-info" href="/card/newCard">Karte erstellen</a>
-        <a class="btn btn-sm btn-primary" href="/card/editCard/{{randomCard._id}}">Bearbeiten</a>
-        <a class="btn btn-sm btn-success" href="/card">okay, wusstich</a>
-        <button class="btn btn-sm btn-warning" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">nee, nee, neee</button>
-      </div>
-    </div>
+<div>
+  <div class="" id="description">
+    <h3 class="">{{ randomCard.description }}</h3>
+  </div>
+  <div class="" id="answer">
+    {{{ randomCard.sanitizedHtml }}}
+  </div>
+  <div class="modal-footer">
+    <a class="button btn-green" href="/card/newCard">Karte erstellen</a>
+    <a class="button btn-blue" href="/card/editCard/{{randomCard._id}}">Bearbeiten</a>
+    <a class="button btn-green" href="/card">okay, wusstich</a>
+    <button class="button btn-red">nee, nee, neee</button>
   </div>
 </div>
-<a class="btn btn-success" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Lernen</a>
-<a class="btn btn-primary" href="/card/newCard" role="button">Karte erstellen</a>
+<a class="button btn-blue" href="/card/newCard">Karte erstellen</a>
