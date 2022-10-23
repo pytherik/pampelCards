@@ -69,6 +69,20 @@ a:hover {
   border-radius: 5%;
 }
 
+.card-container {
+  background-color: #444;
+  text-align: center;
+  padding: 1%;
+  width: 35%;
+  /* height: 75vH; */
+  border: 1px solid #444;
+  border-radius: 5%;
+}
+
+.task-container {
+  font-size: 1.5rem;
+}
+
 hr.card-line {
   border: 1px solid #888;
 }
@@ -130,12 +144,14 @@ hr.line {
 }
 
 .button-footer {
-  margin-top: 8%;
+  margin-top: 3%;
 }
+
 button {
   font-family: 'Syne Mono', Arial, Helvetica, sans-serif;
   font-size: 1rem;
 }
+
 .button {
   font-family: 'Syne Mono', Arial, Helvetica, sans-serif;
   font-size: 1rem;
@@ -143,6 +159,7 @@ button {
   border: none;
   border-radius: 10%;
 }
+
 .btn-green {
   background-color: #B6E388;
   color: #000;
@@ -175,6 +192,38 @@ button {
 
 
 .textarea {
-  height: 180px;
-  margin-bottom: 2%;
+  background-color: #aaa;
+  color: #000;
+  font-family: 'Syne Mono', Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  width: 80%;
+  height: 15rem;
+}
+
+.cardInput-container {
+  background-color: #444;
+  text-align: center;
+  padding: 1%;
+  width: 65%;
+  /* height: 75vH; */
+  border: 1px solid #444;
+  border-radius: 5%;
+}
+
+.cardInputContainer {
+  margin-top: 2rem;
+}
+label.cardLabel {
+  font-size: 1.5rem;
+  text-align: left;
+}
+input.cardInput {
+  background-color: transparent;
+  color: #e9dfad;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  width: 80%;
+  font-family: 'Syne Mono', Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
 }

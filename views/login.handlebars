@@ -1,24 +1,29 @@
-<div>
-  <h1 class="fw-bold mb-0 fs-2">Log dich ein</h1>
-</div>
-
-<div>
-  <span class="errorMessage">{{ errorMessage }}</span>
-</div>
-<form class="" method="POST">
-  <div class="">
-    <input type="text" class="" id="username" 
-    name="username" placeholder="Benutzername" value="Erik">
-    {{!-- name="username" placeholder="Benutzername" value="{{ username }}"> --}}
-    <label for="username">Benutzername</label>
+<div class="home-container">
+  <div class="home-content">
+    <div>
+      <h1>Log dich ein</h1>
+    </div>
+    <div>
+      <span class="errorMessage">{{ errorMessage }}</span>
+    </div>
+    <div class="regFormContainer">
+      <form class="regForm" method="POST">
+        <div class="regInputContainer">
+          <label class="regLabel" for="username">Benutzername</label>
+          <input type="text" class="regInput" id="username" 
+          name="username" placeholder="Benutzername" value="Erik">
+        </div>
+        <div class="regInputContainer">
+          <label class="regLabel" for="Password">Passwort</label>
+          <input type="password" class="regInput" id="Password" name="password" placeholder="Passwort" value="hallowelt">
+        </div>
+        <div class="button-footer">
+          <button class="button btn-green" type="submit">Login</button>
+        </div>
+        <div>
+          <a class="logReg" href="/register">Ich brauche noch einen Zugang</a>
+        </div>
+      </form>
+    </div>
   </div>
-  <div class="">
-    <input type="password" class="" id="Password" name="password" placeholder="Passwort" value="hallowelt">
-    <label for="Password">Passwort</label>
-  </div>
-  <button class="button btn-green" type="submit">Login</button>
-  <div>
-  <a class="logReg" href="/register">Ich brauche noch einen Zugang</a>
-  </div>
-</form>
 </div>

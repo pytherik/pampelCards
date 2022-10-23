@@ -1,35 +1,42 @@
-<div class="">
-  <h1 class="">Melde dich an</h1>
-</div>
-
-<div>
-  <span class="errorMessage">{{ errorMessage }}</span>
-</div>
-<div>
-  <form class="" method="POST">
-    <div class="">
-      <input type="text" class="" id="username" 
-      name="username" placeholder="Benutzername" value="{{ username }}">
-      <label for="username">Benutzername</label>
-    </div>
-    <div class="">
-      <input type="email" class="" id="email" 
-      name="email" placeholder="Email" value="{{ email }}">
-      <label for="Password">Email</label>
-    </div>
-    <div class="">
-      <input type="password" class="" id="Password" name="password" placeholder="Passwort">
-      <label for="Password">Passwort</label>
-    </div>
-    <div class="">
-      <input type="password" class="" id="Password2" name="password2" placeholder="Passwort">
-      <label for="Password2">Passwort bestätigen</label>
+<div class="home-container">
+  <div class="home-content">
+    <div>
+      <h1>Melde dich an</h1>
     </div>
     <div>
-      <button class="button btn-green" type="submit">Anmelden</button>
+      <span class="errorMessage">{{ errorMessage }}</span>
     </div>
-    <div>
-      <a class="logReg" href="/login">Ich bin doch schon dabei</a>
+    <div class="regFormContainer">
+      <form class="regForm" method="POST">
+        <div class="regInputContainer">
+          <label class="regLabel" for="username">Benutzername</label><br>
+          <input type="text" class="regInput" id="username" 
+          name="username" placeholder="Benutzername" value="{{ username }}">
+        </div>
+        <div class="regInputContainer">
+          <label class="regLabel" for="Password">Email</label><br>
+          <input type="email" class="regInput" id="email" 
+          name="email" placeholder="Email" value="{{ email }}">
+        </div>
+        <div class="regInputContainer">
+          <label class="regLabel" for="Password">Passwort</label><br>
+          <input type="password" class="regInput" id="Password" name="password" placeholder="Passwort">
+        </div>
+        <div class="regInputContainer">
+          <label class="regLabel" for="Password2">Passwort bestätigen</label><br>
+          <input type="password" class="regInput" id="Password2" name="password2" placeholder="Passwort">
+        </div>
+        <div class="regInputContainer">
+          <label class="regLabel" for="Password">Passwort</label><br>
+          <input type="password" class="regInput" id="Password" name="password" placeholder="Passwort">
+        </div>
+        <div class="button-footer">
+          <button class="button btn-green" type="submit">Anmelden</button>
+        </div>
+        <div>
+          <a class="logReg" href="/login">Ich bin doch schon dabei</a>
+        </div>
+      </form>
     </div>
-  </form>
+  </div>
 </div>

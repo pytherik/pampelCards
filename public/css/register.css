@@ -5,12 +5,13 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: #333;
+  background-color: #666;
   color: #e9dfad;
-  font-family: 'Quicksand', monospace, sans-serif;
+  font-family: 'Syne Mono', Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -23,9 +24,32 @@ a:hover {
   cursor: pointer;
 }
 
-.logReg {
-  font-size: 1.3rem;
-  color: #9FC9F3;
+hr.line {
+  border: 1px solid #555
+}
+
+.nav-bar {
+  background-color: #333;
+  position: relative;
+  margin-top: 0;
+  padding: 0 1% 0 0;
+  width: 100%;
+  height: 70px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+li.nav-item {
+  margin: 0 3%;
+  font-size: 3rem;
 }
 
 .errorMessage {
@@ -33,37 +57,71 @@ a:hover {
   color: #FF8787;
 }
 
-.btn-success {
+.home-container {
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.home-content {
+  background-color: #444;
+  text-align: center;
+  padding: 1%;
+  width: 25%;
+  /* height: 75vH; */
+  border: 1px solid #444;
+  border-radius: 5%;
+}
+
+.regInputContainer {
+  margin-top: 2rem;
+}
+label.regLabel {
+  font-size: 1.5rem;
+  text-align: left;
+}
+input.regInput {
+  background-color: transparent;
+  color: #e9dfad;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  width: 80%;
+  font-family: 'Syne Mono', Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+}
+
+.button-footer {
+  margin-top: 8%;
+}
+
+button {
+  font-family: 'Syne Mono', Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  width: 80%
+}
+
+.button {
+  display: inline-block;
+  font-family: 'Syne Mono', Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  padding: 0.2em 0.5em;
+  border: none;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.logReg {
+  font-size: 1.3rem;
+  color: #9FC9F3;
+}
+
+.btn-green {
   background-color: #B6E388;
   color: #000;
 }
 
-.btn-success:hover {
+.btn-green:hover {
   background-color: #B6E388aa;
   color: #000;
 }
-
-.btn-warning {
-  background-color: #FF8787;
-  color: #000;
-}
-
-.btn-warning:hover {
-  background-color: #FF8787aa;
-  color: #000;
-}
-
-.btn-primary {
-  background-color: #ABD9FF;
-  color: #000;
-}
-
-.btn-primary:hover {
-  background-color: #ABD9FFaa;
-  color: #000;
-}
-
-.form-group {
-  width: 50%;
-}
-

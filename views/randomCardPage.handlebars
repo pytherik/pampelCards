@@ -1,7 +1,7 @@
 <div class="home-container">
   <div class="card-container">
-    <div id="question-container">
-      <h2 class="">Was weisst du über ...</h2>
+    <div id="question-container" class="task-container">
+      <h3 class="">Was weisst du über ...</h3>
       <div class="random-question">
         <hr class="card-line">
         <h1 id="card-question">{{ randomCard.question }}</h1>  
@@ -14,7 +14,7 @@
         </div>
       </div>
     </div>
-    <div id="answer-container" hidden>
+    <div id="answer-container" class="task-container" hidden>
       <h3 class="">{{ randomCard.description }}</h3>
       {{{ randomCard.sanitizedHtml }}}
       <div class="button-footer">

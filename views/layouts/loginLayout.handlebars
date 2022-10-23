@@ -3,36 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ title }}</title>
-    <link rel="stylesheet" href="css/register.css">
+    <title>PampelCards</title>
+    <link rel="stylesheet" href="/css/register.css">
   </head>
   <body>
-  <nav>
-    <ul class="">
-      <li class="">
-        <a class="" aria-current="page" href="/">Startseite</a>
-      </li>
-      <li class="">
-        <a class="" href="#">Frag mich ab</a>
-      </li>
-      <li class="">
-        <a class="" href="https://pytherik.github.io/pampelwort/" target="blank">Pampelwort spielen</a>
-      </li>
-      <li class="">
-        <a class="" href="#">Kartei</a>
-        <ul class="">
-          <li><a class="" href="#">Neue Karte erstellen</a></li>
-          <li><a class="" href="#">Karte editieren</a></li>
-          <li><a class="" href="#">Karte entfernen</a></li>
-          </li>
-          <li><a class="" href="#" >Neue Kategorie</a></li>
+  <div class="header">
+    <nav>
+      <div class="nav-bar">
+        <ul class="nav-list">
+          <li class="nav-item">PampelCards</li>
+          <li class="nav-item">Die Flashcards-App</li>
         </ul>
-      </li>
-    </ul>
-  </nav>
-  <h1 id="welcome">{{ header }}</h1>
+      </div>
+    </nav>
+    <div>
+      <h1 id="welcome">{{ header }}</h1>
+      <hr class="line">
+    </div>
+  </div>
       
-      {{{body}}}
-
+  {{{body}}}
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="/js/app.js"></script>
   </body>
 </html>

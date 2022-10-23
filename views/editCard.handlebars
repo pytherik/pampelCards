@@ -1,4 +1,4 @@
-<h1 class="mb-4">Bearbeiten</h1>
+{{!-- <h1 class="mb-4">Bearbeiten</h1>
 <span class="errorMessage">{{ errorMessage }}</span>
 <div>
   <form action="/card/{{ _id }}?_method=PUT" method="POST">
@@ -27,4 +27,42 @@
   <a href="/card" class="button btn-blue">Abbruch</a>
   <button type="submit" class="button btn-green">Speichern</button>
   </form>
+</div> --}}
+ <div class="home-container">
+  <div class="cardInput-container">
+    <div>
+      <span class="errorMessage">{{ errorMessage }}</span>
+    </div>
+    <div class="cardFormContainer">
+  <form action="/card/{{ _id }}?_method=PUT" method="POST">
+        <div class="cardInputContainer">
+          <label class="cardLabel" for="category">Kategorie</label><br>
+          <input class="cardInput" type="text" name="category" id="category" list="categories" value="{{ category }}" required>
+          <datalist id="categories">
+            {{#each categories}}
+            <option value="{{ this }}">{{ this }}</option>
+            {{/each}}
+          </datalist>
+        </div>
+        <div class="cardInputContainer">
+          <label class="cardLabel" for="question">Frage</label><br>
+          <input class="cardInput" type="text" name="question" id="question" class="" value="{{ question }}" required>
+        </div>
+        <div class="cardInputContainer">
+          <label class="cardLabel" for="description">Beschreibung</label><br>
+          <input class="cardInput" type="text"  name="description" id="description" class="" value="{{ description }}">
+        </div>
+          <div class="cardInputContainer">
+            <label class="cardLabel" for="markdown">Antwort (md)</label><br>
+            <textarea class="textarea" name="answerMd" id="markdown">{{ answerMd }}</textarea>
+          </div>
+        <div class="button-footer">
+        </div>
+        <div>
+          <a href="/" class="button btn-blue">Abbruch</a>
+          <button type="submit" class="button btn-green saveAndGo">Speichern</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
