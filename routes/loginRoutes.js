@@ -36,12 +36,20 @@ router.post('/', middleware.redirectHome, async (req, res, next) => {
     }
   
     errorMessage = "Das haut nicht hin!";
-    return res.status(200).render('login', { layout: 'loginLayout', username: req.body.username, errorMessage: errorMessage });
+    return res.status(200).render('login', {
+      layout: 'loginLayout',
+      username: req.body.username,
+      errorMessage: errorMessage
+    });
   }
 
   errorMessage = "Fülle bitte beide Felder aus!";
 
-  res.status(200).render('login', { layout: 'loginLayout', username: req.body.username, errorMessage: errorMessage });
+  res.status(200).render('login', {
+    layout: 'loginLayout',
+    username: req.body.username,
+    errorMessage: errorMessage
+  });
 })
 
 module.exports = router;
