@@ -10,6 +10,9 @@
 
 body {
   background-color: #666;
+  /* background-image: url('../images/busts-gf81f42c0f_1920.jpg'); */
+  /* background-image: url('../images/age-g31c25d880_1920.jpg'); */
+  background-image: url('../images/books-gd1abeb1c9_1920_blur.jpg');
   color: #e9dfad;
   font-family: 'Syne Mono', monospace, sans-serif;
 }
@@ -35,10 +38,11 @@ body {
 }
 
 li {
-  list-style-type: none;
+  list-style-type: disc;
 }
 
 li.nav-item {
+  list-style-type: none;
   font-size: 1.5rem;
 }
 
@@ -60,7 +64,7 @@ a:hover {
 
 .card-container,
 .home-content {
-  background-color: #444;
+  background-color: #444444dd;
   text-align: center;
   padding: 1%;
   width: 25%;
@@ -70,7 +74,7 @@ a:hover {
 }
 
 .card-container {
-  background-color: #444;
+  background-color: #444444e0;
   text-align: center;
   padding: 1%;
   width: 35%;
