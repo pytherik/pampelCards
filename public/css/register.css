@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Red+Hat+Mono&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +10,7 @@
 body {
   background-color: #333;
   color: #e9dfad;
-  font-family: 'Syne Mono', monospace, sans-serif;
+  font-family: 'Quicksand', monospace, sans-serif;
 }
 
 a {
@@ -23,14 +26,6 @@ a:hover {
 .logReg {
   font-size: 1.3rem;
   color: #9FC9F3;
-}
-
-
-.form-control,
-.form-control:focus {
-  background-color: #333;
-  font-size: 1.3rem;
-  color: #e9dfad;
 }
 
 .errorMessage {

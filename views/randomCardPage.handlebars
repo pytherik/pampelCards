@@ -1,27 +1,28 @@
-<div>
-  <div class="">
-    <h3 class="">Was weisst du über ...</h3>
-  </div>
-  <div class="" id="question">
-    {{ randomCard.question }}
-  </div>
-  <div class="">
-    <a class="button btn-green" href="/card">okay, weiter</a>
-    <button class="button btn-blue">Zeig erstmal</button>
+<div class="home-container">
+  <div class="card-container">
+    <div id="question-container">
+      <h2 class="">Was weisst du über ...</h2>
+      <div class="random-question">
+        <hr class="card-line">
+        <h1 id="card-question">{{ randomCard.question }}</h1>  
+        <hr class="card-line">
+      </div>
+      <div>
+        <div class="button-footer">
+          <a class="button btn-green" href="/card">okay, weiter</a>
+          <button class="button btn-blue show-answer">Zeig erstmal</button>
+        </div>
+      </div>
+    </div>
+    <div id="answer-container" hidden>
+      <h3 class="">{{ randomCard.description }}</h3>
+      {{{ randomCard.sanitizedHtml }}}
+      <div class="button-footer">
+        <a class="button btn-green" href="/card/newCard">Karte</a>
+        <a class="button btn-blue" href="/card/editCard/{{randomCard._id}}">Edit</a>
+        <a class="button btn-green" href="/card">Okay</a>
+        <a class="button btn-red" href="/card">Nope</a>
+      </div>
+    </div>
   </div>
 </div>
-<div>
-  <div class="" id="description">
-    <h3 class="">{{ randomCard.description }}</h3>
-  </div>
-  <div class="" id="answer">
-    {{{ randomCard.sanitizedHtml }}}
-  </div>
-  <div class="modal-footer">
-    <a class="button btn-green" href="/card/newCard">Karte erstellen</a>
-    <a class="button btn-blue" href="/card/editCard/{{randomCard._id}}">Bearbeiten</a>
-    <a class="button btn-green" href="/card">okay, wusstich</a>
-    <button class="button btn-red">nee, nee, neee</button>
-  </div>
-</div>
-<a class="button btn-blue" href="/card/newCard">Karte erstellen</a>

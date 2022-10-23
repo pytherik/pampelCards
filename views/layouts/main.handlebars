@@ -7,32 +7,28 @@
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-  <nav>
-    <ul class="">
-      <li class="">
-        <a class="" aria-current="page" href="/">Startseite</a>
-      </li>
-      <li class="">
-        <a class="" href="#">Frag mich ab</a>
-      </li>
-      <li class="">
-        <a class="" href="https://pytherik.github.io/pampelwort/" target="blank">Pampelwort spielen</a>
-      </li>
-      <li class="">
-        <a class="" href="#">Kartei</a>
-        <ul class="">
-          <li><a class="" href="#">Neue Karte erstellen</a></li>
-          <li><a class="" href="#">Karte editieren</a></li>
-          <li><a class="" href="#">Karte entfernen</a></li>
+  <div class="header">
+    <nav>
+      <div class="nav-bar">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="" href="/">
+              <img class="profilePic" src="{{ user.profilePic }}" alt="">
+            </a>
           </li>
-          <li><a class="" href="#" >Neue Kategorie</a></li>
+          <li class="nav-item"><a href="/">Willkommen {{ user.username }}</a></li>
+          <li class="nav-item"><a href="/">Startseite</a></li>
+          <li class="nav-item"><a href="/card">Frag mich ab</a></li>
+          <li class="nav-item"><a href="/card/newCard">Neue Karte Erstellen</a></li>
+          <li class="nav-item"><a href="/logout"><img class="logout-icon" src="/images/icons/logout2.png" alt=""></a></li>
         </ul>
-      </li>
-    </ul>
-  </nav>
-
-  <h1 id="welcome">{{ header }}</h1>
-  <hr>
+      </div>
+    </nav>
+    <div>
+      <h1 id="welcome">{{ header }}</h1>
+      <hr class="line">
+    </div>
+  </div>
       
   {{{body}}}
     

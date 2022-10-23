@@ -1,24 +1,24 @@
-<div>
-  <div class="">
-    <h3>Willkommen bei der Lern-App PampelCards.</h3>
-    <hr>
+<div class="home-container">
+  <div class="home-content">
+    <h2>Willkommen bei der Lern-App PampelCards.</h2>
+    <hr class="line">
     <p>
       Hier kannst du, nach Kategorien georndnet, 
       mit deinen Flashcards lernen, neue Karten erstellen, usw.
     </p>
   </div>
-  <div class="">
+  <div class="home-content">
     <a id="playNow" href="/card"><img id="flashcard" src="/images/icons/joker.svg" alt="Flashcard illustration"><br>Jetzt loslegen</a>
   </div>
-  <div class="">
+  <div class="home-content">
     <h1>
       {{ randomCard.question }}
     </h1>
     <h4>
       {{ randomCard.description }}
     </h4>
-    <hr>
-    <p>
+    <hr class="line">
+    <p class="answer-md">
       {{{ randomCard.sanitizedHtml }}}
     </p>
   </div>

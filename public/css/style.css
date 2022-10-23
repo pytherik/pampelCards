@@ -1,14 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Red+Hat+Mono&display=swap');
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: #333;
+  background-color: #666;
   color: #e9dfad;
   font-family: 'Syne Mono', monospace, sans-serif;
+}
+
+.nav-bar {
+  background-color: #333;
+  position: relative;
+  margin-top: 0;
+  padding: 0 1% 0 0;
+  width: 100%;
+  height: 70px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+li.nav-item {
+  font-size: 1.5rem;
 }
 
 a {
@@ -21,10 +52,34 @@ a:hover {
   color: #fff;
 }
 
-.logReg {
-  font-size: 1.3rem;
-  color: #9FC9F3;
+.home-container {
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-around;
 }
+
+.card-container,
+.home-content {
+  background-color: #444;
+  text-align: center;
+  padding: 1%;
+  width: 25%;
+  /* height: 75vH; */
+  border: 1px solid #444;
+  border-radius: 5%;
+}
+
+hr.card-line {
+  border: 1px solid #888;
+}
+
+hr.line {
+  border: 1px solid #777;
+}
+#card-question {
+  margin: 10px 0;
+}
+
 #playNow {
   font-size: 2rem;
   font-weight: 900;
@@ -33,7 +88,6 @@ a:hover {
 
 #welcome {
   text-align: center;
-  margin-top: 5%;
   font-size: 4rem;
 }
 
@@ -46,7 +100,7 @@ a:hover {
 }
 
 #flashcard {
-  width: 250px;
+  width: 90%;
   padding: 5%;
 }
 
@@ -63,11 +117,32 @@ a:hover {
   border-radius: 50%;
 }
 
+.logout-icon {
+  width: 50px;
+}
 .errorMessage {
   font-size: 1.3rem;
   color: #FF8787;
 }
 
+.random-question {
+  margin: 5% 0;
+}
+
+.button-footer {
+  margin-top: 8%;
+}
+button {
+  font-family: 'Syne Mono', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+.button {
+  font-family: 'Syne Mono', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  padding: 0.2em 0.5em;
+  border: none;
+  border-radius: 10%;
+}
 .btn-green {
   background-color: #B6E388;
   color: #000;
