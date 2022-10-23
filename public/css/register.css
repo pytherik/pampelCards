@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #333;
+  color: #e9dfad;
+  font-family: 'Syne Mono', monospace, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #e9dfad;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.logReg {
+  font-size: 1.3rem;
+  color: #9FC9F3;
+}
+
+
+.form-control,
+.form-control:focus {
+  background-color: #333;
+  font-size: 1.3rem;
+  color: #e9dfad;
+}
+
+.errorMessage {
+  font-size: 1.3rem;
+  color: #FF8787;
+}
+
+.btn-success {
+  background-color: #B6E388;
+  color: #000;
+}
+
+.btn-success:hover {
+  background-color: #B6E388aa;
+  color: #000;
+}
+
+.btn-warning {
+  background-color: #FF8787;
+  color: #000;
+}
+
+.btn-warning:hover {
+  background-color: #FF8787aa;
+  color: #000;
+}
+
+.btn-primary {
+  background-color: #ABD9FF;
+  color: #000;
+}
+
+.btn-primary:hover {
+  background-color: #ABD9FFaa;
+  color: #000;
+}
+
+.form-group {
+  width: 50%;
+}
+
