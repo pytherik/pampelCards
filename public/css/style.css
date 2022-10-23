@@ -64,23 +64,19 @@ a:hover {
 
 .card-container,
 .home-content {
-  background-color: #444444dd;
+  background-color: #444444bb;
+  font-size: 1.3rem;
   text-align: center;
   padding: 1%;
   width: 25%;
   /* height: 75vH; */
   border: 1px solid #444;
   border-radius: 5%;
+  box-shadow: 3px 1px 3px #555555aa;
 }
 
 .card-container {
   background-color: #444444e0;
-  text-align: center;
-  padding: 1%;
-  width: 35%;
-  /* height: 75vH; */
-  border: 1px solid #444;
-  border-radius: 5%;
 }
 
 .task-container {
@@ -93,6 +89,8 @@ hr.card-line {
 
 hr.line {
   border: 1px solid #777;
+  width: 80%;
+  margin: 0 auto;
 }
 #card-question {
   margin: 10px 0;
@@ -120,6 +118,7 @@ hr.line {
 #flashcard {
   width: 90%;
   padding: 5%;
+  border-radius: 50%;
 }
 
 .pCard {
@@ -205,13 +204,13 @@ button {
 }
 
 .cardInput-container {
-  background-color: #444;
+  background-color: #444444bb;
   text-align: center;
   padding: 1%;
   width: 65%;
   /* height: 75vH; */
   border: 1px solid #444;
-  border-radius: 5%;
+  border-radius: 20px;
 }
 
 .cardInputContainer {
