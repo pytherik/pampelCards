@@ -1,39 +1,42 @@
-<div class="modal modal-signin position-static d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalSignin">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content rounded-4 shadow">
-      <div class="modal-header p-5 pb-4 border-bottom-0">
-        <!-- <h1 class="modal-title fs-5" >Modal title</h1> -->
-        <h1 class="fw-bold mb-0 fs-2">Melde dich an</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-
-      <div class="modal-body p-5 pt-0">
-        <div>
-          <span class="errorMessage">{{ errorMessage }}</span>
+<div class="home-container">
+  <div class="home-content">
+    <div>
+      <h1>Melde dich an</h1>
+    </div>
+    <div>
+      <span class="errorMessage">{{ errorMessage }}</span>
+    </div>
+    <div class="regFormContainer">
+      <form class="regForm" method="POST">
+        <div class="regInputContainer">
+          <label class="regLabel" for="username">Benutzername</label><br>
+          <input type="text" class="regInput" id="username" 
+          name="username" placeholder="Benutzername" value="{{ username }}">
         </div>
-        <form class="" method="POST">
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control rounded-3" id="username" 
-            name="username" placeholder="Benutzername" value="{{ username }}">
-            <label for="username">Benutzername</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="email" class="form-control rounded-3" id="email" 
-            name="email" placeholder="Email" value="{{ email }}">
-            <label for="Password">Email</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="password" class="form-control rounded-3" id="Password" name="password" placeholder="Passwort">
-            <label for="Password">Passwort</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="password" class="form-control rounded-3" id="Password2" name="password2" placeholder="Passwort">
-            <label for="Password2">Passwort bestätigen</label>
-          </div>
-          <button class="w-100 mb-2 btn btn-lg rounded-3 btn-success" type="submit">Anmelden</button>
+        <div class="regInputContainer">
+          <label class="regLabel" for="Password">Email</label><br>
+          <input type="email" class="regInput" id="email" 
+          name="email" placeholder="Email" value="{{ email }}">
+        </div>
+        <div class="regInputContainer">
+          <label class="regLabel" for="Password">Passwort</label><br>
+          <input type="password" class="regInput" id="Password" name="password" placeholder="Passwort">
+        </div>
+        <div class="regInputContainer">
+          <label class="regLabel" for="Password2">Passwort bestätigen</label><br>
+          <input type="password" class="regInput" id="Password2" name="password2" placeholder="Passwort">
+        </div>
+        <div class="regInputContainer">
+          <label class="regLabel" for="Password">Passwort</label><br>
+          <input type="password" class="regInput" id="Password" name="password" placeholder="Passwort">
+        </div>
+        <div class="button-footer">
+          <button class="button btn-green" type="submit">Anmelden</button>
+        </div>
+        <div>
           <a class="logReg" href="/login">Ich bin doch schon dabei</a>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   </div>
 </div>

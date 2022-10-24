@@ -1,24 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Red+Hat+Mono&display=swap');
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: #333;
+  background-color: #666;
+  /* background-image: url('../images/busts-gf81f42c0f_1920.jpg'); */
+  /* background-image: url('../images/age-g31c25d880_1920.jpg'); */
+  background-image: url('../images/books-gd1abeb1c9_1920_blur.jpg');
   color: #e9dfad;
+  font-family: 'Quicksand', monospace, sans-serif;
+}
+
+.nav-bar {
+  background-color: #5e755e88;
+  position: relative;
+  margin-top: 0;
+  padding: 0 1% 0 0;
+  width: 100%;
+  height: 70px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li {
+  margin-top: 5px;
+  list-style-type: none;
+}
+
+li.nav-item {
+  list-style-type: none;
+  font-size: 1.5rem;
 }
 
 a {
   text-decoration: none;
+  color: #e9dfad;
 }
 
 a:hover {
   cursor: pointer;
+  color: #fff;
 }
 
-.logReg {
+.home-container {
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-container,
+.home-content {
+  background-color: #21677888;
   font-size: 1.3rem;
-  color: #9FC9F3;
+  text-align: center;
+  padding: 1%;
+  width: 25%;
+  /* height: 75vH; */
+  border: 1px solid #444;
+  border-radius: 20px;
+  box-shadow: 3px 1px 3px #555555aa;
+}
+
+.card-container {
+  width: 35%;
+  background-color: #216778e0;
+}
+
+.task-container {
+  font-size: 1.5rem;
+}
+
+hr.card-line {
+  border: 1px solid #888;
+}
+
+hr.line {
+  border: 1px solid #777;
+  width: 80%;
+  margin: 0 auto;
+}
+#card-question {
+  margin: 10px 0;
+}
+
+#card-category {
+  font-size: 1.1rem;
 }
 #playNow {
   font-size: 2rem;
@@ -28,7 +109,6 @@ a:hover {
 
 #welcome {
   text-align: center;
-  margin-top: 5%;
   font-size: 4rem;
 }
 
@@ -36,13 +116,18 @@ a:hover {
   width: 40px;
 }
 
+#introQuest {
+  font-size: 1.2rem;
+}
+
 .index-container {
   margin-top: 4%;
 }
 
 #flashcard {
-  width: 250px;
+  width: 90%;
   padding: 5%;
+  border-radius: 50%;
 }
 
 .pCard {
@@ -58,66 +143,162 @@ a:hover {
   border-radius: 50%;
 }
 
-.modal-content {
-  background-color: #777;
+.logout-icon {
+  width: 50px;
 }
-
-.modal-body.question {
-  font-size: 2.5rem;
-}
-
-.modal-body.answer {
-  font-size: 1.3rem;
-}
-
-
-.form-control,
-.form-control:focus {
-  background-color: #333;
-  font-size: 1.3rem;
-  color: #e9dfad;
-}
-
 .errorMessage {
   font-size: 1.3rem;
   color: #FF8787;
 }
 
-.btn-success {
+.random-question {
+  margin: 5% 0;
+}
+
+.button-footer {
+  margin-top: 3%;
+}
+
+button {
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+.button {
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  padding: 0.2em 0.5em;
+  border: none;
+  border-radius: 10%;
+}
+
+.btn-green {
   background-color: #B6E388;
   color: #000;
 }
 
-.btn-success:hover {
+.btn-green:hover {
   background-color: #B6E388aa;
   color: #000;
 }
 
-.btn-warning {
+.btn-red {
   background-color: #FF8787;
   color: #000;
 }
 
-.btn-warning:hover {
+.btn-red:hover {
   background-color: #FF8787aa;
   color: #000;
 }
 
-.btn-primary {
+.btn-blue {
   background-color: #ABD9FF;
   color: #000;
 }
 
-.btn-primary:hover {
+.btn-blue:hover {
   background-color: #ABD9FFaa;
   color: #000;
 }
 
-.form-group {
-  width: 50%;
-}
 
 .textarea {
-  height: 180px;
-  margin-bottom: 2%;
+  background-color: #aaa;
+  color: #000;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  width: 80%;
+  height: 15rem;
+}
+
+.cardInput-container {
+  background-color: #444444bb;
+  text-align: center;
+  padding: 1%;
+  width: 65%;
+  /* height: 75vH; */
+  border: 1px solid #444;
+  border-radius: 20px;
+}
+
+.cardInputContainer {
+  margin-top: 2rem;
+}
+label.cardLabel {
+  font-size: 1.5rem;
+  text-align: left;
+}
+input.cardInput {
+  background-color: transparent;
+  color: #e9dfad;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  width: 80%;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1300px) {
+  /* body {
+    font-size: 0.7em;
+  } */
+
+  #welcome {
+    font-size: 3rem;
+  }
+
+  #home-question {
+    font-size: 1.5rem;
+  }
+
+  #answer-container {
+    font-size: 1rem;
+  }
+  #card-question {
+    font-size: 1.6rem
+  }
+
+  .nav-bar {
+    height: 40px;
+  }
+  
+  .logout-icon {
+    width: 30px;
+  }
+
+  li.nav-item {
+    font-size: 1.1rem;
+  }
+
+  .profilePic {
+    width: 30px;
+  }
+  
+ .card-container,  
+ .home-content {
+  font-size: 1.1rem;
+  }
+}
+.textarea {
+  font-size: 1.1rem;
+  width: 80%;
+  height: 10rem;
+}
+
+.cardInput-container {
+  width: 55%;
+}
+
+.cardInputContainer {
+  margin-top: 1rem;
+}
+label.cardLabel {
+  font-size: 1.1rem;
+}
+input.cardInput {
+  width: 80%;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
 }

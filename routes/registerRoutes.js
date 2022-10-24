@@ -27,7 +27,12 @@ router.post('/', async (req, res) => {
     if (pass1 !== pass2) {
       payload.errorMessage = 'Die Passwörter stimmen nicht überein!';
       errorMessage = 'Die Passwörter stimmen nicht überein!';
-      return res.status(200).render('register', { layout: 'loginLayout', username: req.body.username, email: req.body.email, errorMessage: errorMessage });
+      return res.status(200).render('register', {
+        layout: 'loginLayout',
+        username: req.body.username,
+        email: req.body.email,
+        errorMessage: errorMessage
+      });
     }
       
     const user = await User.findOne({
@@ -39,7 +44,12 @@ router.post('/', async (req, res) => {
       .catch((error) => {
         console.log(error);
         errorMessage = "Irgendwas stimmt hier nicht!";
-        return res.status(200).render('register', { layout: 'loginLayout', username: req.body.username, email: req.body.email, errorMessage: errorMessage });
+        return res.status(200).render('register', {
+          layout: 'loginLayout',
+          username: req.body.username,
+          email: req.body.email,
+          errorMessage: errorMessage
+        });
       });
 
 

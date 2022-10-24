@@ -50,6 +50,7 @@ app.set('view engine', 'handlebars');
 
 app.get('/', middleware.redirectLogin, async (req, res, next) => {
   const card = await Cards.findOne({ author: req.session.user._id });
+  const categories = await Cards.distinct('category');
 
   if (!card) {
     const randomCard = {
@@ -74,7 +75,8 @@ app.get('/', middleware.redirectLogin, async (req, res, next) => {
     res.render('home', {
       header: 'Lernen mit PampelCards',
       user: req.session.user,
-      randomCard
+      randomCard,
+      categories
     });
   }
 });
