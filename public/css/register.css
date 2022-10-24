@@ -11,7 +11,7 @@
 body {
   background-color: #666;
   color: #e9dfad;
-  font-family: 'Syne Mono', Arial, Helvetica, sans-serif;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -87,7 +87,7 @@ input.regInput {
   border: none;
   border-bottom: 1px solid #666;
   width: 80%;
-  font-family: 'Syne Mono', Arial, Helvetica, sans-serif;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
   font-size: 2rem;
 }
 
@@ -96,14 +96,14 @@ input.regInput {
 }
 
 button {
-  font-family: 'Syne Mono', Arial, Helvetica, sans-serif;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
   font-size: 2rem;
   width: 80%
 }
 
 .button {
   display: inline-block;
-  font-family: 'Syne Mono', Arial, Helvetica, sans-serif;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
   padding: 0.2em 0.5em;
   border: none;

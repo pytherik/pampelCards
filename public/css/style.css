@@ -14,11 +14,11 @@ body {
   /* background-image: url('../images/age-g31c25d880_1920.jpg'); */
   background-image: url('../images/books-gd1abeb1c9_1920_blur.jpg');
   color: #e9dfad;
-  font-family: 'Syne Mono', monospace, sans-serif;
+  font-family: 'Quicksand', monospace, sans-serif;
 }
 
 .nav-bar {
-  background-color: #333;
+  background-color: #5e755e88;
   position: relative;
   margin-top: 0;
   padding: 0 1% 0 0;
@@ -38,7 +38,8 @@ body {
 }
 
 li {
-  list-style-type: disc;
+  margin-top: 5px;
+  list-style-type: none;
 }
 
 li.nav-item {
@@ -64,7 +65,7 @@ a:hover {
 
 .card-container,
 .home-content {
-  background-color: #444444bb;
+  background-color: #21677888;
   font-size: 1.3rem;
   text-align: center;
   padding: 1%;
@@ -76,7 +77,7 @@ a:hover {
 }
 
 .card-container {
-  background-color: #444444e0;
+  background-color: #216778e0;
 }
 
 .task-container {
@@ -151,12 +152,12 @@ hr.line {
 }
 
 button {
-  font-family: 'Syne Mono', Arial, Helvetica, sans-serif;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
   font-size: 1rem;
 }
 
 .button {
-  font-family: 'Syne Mono', Arial, Helvetica, sans-serif;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
   font-size: 1rem;
   padding: 0.2em 0.5em;
   border: none;
@@ -197,7 +198,7 @@ button {
 .textarea {
   background-color: #aaa;
   color: #000;
-  font-family: 'Syne Mono', Arial, Helvetica, sans-serif;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
   width: 80%;
   height: 15rem;
@@ -227,6 +228,6 @@ input.cardInput {
   border: none;
   border-bottom: 1px solid #666;
   width: 80%;
-  font-family: 'Syne Mono', Arial, Helvetica, sans-serif;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
 }
