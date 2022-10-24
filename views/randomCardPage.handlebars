@@ -1,11 +1,12 @@
 <div class="home-container">
   <div class="card-container">
     <div id="question-container" class="task-container">
-      <h3 class="">Was weisst du über ...</h3>
+      <h3 id="introQuest">Was weisst du über ...</h3>
       <div class="random-question">
         <hr class="card-line">
         <h1 id="card-question">{{ randomCard.question }}</h1>  
         <hr class="card-line">
+        <span id="card-category">Kategorie: {{ cat }}</span>
       </div>
       <div>
         <div class="button-footer">
@@ -20,7 +21,11 @@
       <div class="button-footer">
         <a class="button btn-green" href="/card/newCard">Karte</a>
         <a class="button btn-blue" href="/card/editCard/{{randomCard._id}}">Edit</a>
+        {{#if cat }}
+        <a class="button btn-green" href="/card/categories/{{ cat }}">Okay</a>
+        {{else}}
         <a class="button btn-green" href="/card">Okay</a>
+        {{/if }}
         <a class="button btn-red" href="/card">Nope</a>
       </div>
     </div>

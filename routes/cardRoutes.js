@@ -11,7 +11,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 router.get('/', middleware.redirectLogin, async (req, res, next) => {
   const card = await Cards.findOne({ author: req.session.user._id });
-  
   if (!card) {
     const payload = {
       header: 'Mach Karte',
@@ -21,16 +20,55 @@ router.get('/', middleware.redirectLogin, async (req, res, next) => {
     payload.header = 'Mach neue Karte'
     return res.render('newCard', payload);
   }
+
+
   const cards = await Cards.find({ author: req.session.user._id }).lean();
   
   const num = Math.floor(Math.random() * cards.length)
   const randomCard = cards[num]
   // console.log(cards);
-  console.log(randomCard, cards.length);
+  // console.log(randomCard, cards.length);
   const payload = {
     header: 'Jetzt wird\'s ernst!',
     user: req.session.user,
-    randomCard
+    randomCard,
+    cat: req.params.cat
+  }
+  res.render('randomCardPage', payload);
+});
+
+router.get('/categories/:cat', middleware.redirectLogin, async (req, res, next) => {
+  const card = await Cards.findOne({ author: req.session.user._id });
+  if (req.params.cat) {
+    console.log(req.params.cat);
+  }
+  if (!card) {
+    const payload = {
+      header: 'Mach Karte',
+      user: req.session.user,
+    }
+    console.log('Du hast noch keine Karten erstellt.');
+    payload.header = 'Mach neue Karte'
+    return res.render('newCard', payload);
+  }
+
+
+  const cards = await Cards.find({
+    $and: [
+      { author: req.session.user._id },
+      { category: req.params.cat }
+    ]
+  }).lean();
+  
+  const num = Math.floor(Math.random() * cards.length)
+  const randomCard = cards[num]
+  // console.log(cards);
+  // console.log(randomCard, cards.length);
+  const payload = {
+    header: 'Jetzt wird\'s ernst!',
+    user: req.session.user,
+    randomCard,
+    cat: req.params.cat
   }
   res.render('randomCardPage', payload);
 });
@@ -96,7 +134,7 @@ router.get('/newCard', async (req, res) => {
   const categories = await Cards.distinct('category');
   console.log(categories);
   res.render('newCard', { layout: 'main', 
-  header: 'Mach Karte',
+  header: '',
   user: req.session.user,
   categories: categories
 });

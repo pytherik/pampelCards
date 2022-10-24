@@ -72,11 +72,12 @@ a:hover {
   width: 25%;
   /* height: 75vH; */
   border: 1px solid #444;
-  border-radius: 5%;
+  border-radius: 20px;
   box-shadow: 3px 1px 3px #555555aa;
 }
 
 .card-container {
+  width: 35%;
   background-color: #216778e0;
 }
 
@@ -97,6 +98,9 @@ hr.line {
   margin: 10px 0;
 }
 
+#card-category {
+  font-size: 1.1rem;
+}
 #playNow {
   font-size: 2rem;
   font-weight: 900;
@@ -110,6 +114,10 @@ hr.line {
 
 #logoutIcon {
   width: 40px;
+}
+
+#introQuest {
+  font-size: 1.2rem;
 }
 
 .index-container {
@@ -230,4 +238,67 @@ input.cardInput {
   width: 80%;
   font-family: 'Quicksand', Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
+}
+
+@media (max-width: 1300px) {
+  /* body {
+    font-size: 0.7em;
+  } */
+
+  #welcome {
+    font-size: 3rem;
+  }
+
+  #home-question {
+    font-size: 1.5rem;
+  }
+
+  #answer-container {
+    font-size: 1rem;
+  }
+  #card-question {
+    font-size: 1.6rem
+  }
+
+  .nav-bar {
+    height: 40px;
+  }
+  
+  .logout-icon {
+    width: 30px;
+  }
+
+  li.nav-item {
+    font-size: 1.1rem;
+  }
+
+  .profilePic {
+    width: 30px;
+  }
+  
+ .card-container,  
+ .home-content {
+  font-size: 1.1rem;
+  }
+}
+.textarea {
+  font-size: 1.1rem;
+  width: 80%;
+  height: 10rem;
+}
+
+.cardInput-container {
+  width: 55%;
+}
+
+.cardInputContainer {
+  margin-top: 1rem;
+}
+label.cardLabel {
+  font-size: 1.1rem;
+}
+input.cardInput {
+  width: 80%;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
 }
