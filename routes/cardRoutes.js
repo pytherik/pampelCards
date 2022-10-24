@@ -51,8 +51,6 @@ router.get('/categories/:cat', middleware.redirectLogin, async (req, res, next) 
     payload.header = 'Mach neue Karte'
     return res.render('newCard', payload);
   }
-
-
   const cards = await Cards.find({
     $and: [
       { author: req.session.user._id },
@@ -130,6 +128,11 @@ router.put('/:id', async (req, res) => {
   }
 })
 
+router.delete('/:id', async (req, res) => {
+  console.log(req.params.id)
+  await Cards.findByIdAndDelete(req.params.id);
+  res.redirect('/');
+})
 router.get('/newCard', async (req, res) => {
   const categories = await Cards.distinct('category');
   console.log(categories);

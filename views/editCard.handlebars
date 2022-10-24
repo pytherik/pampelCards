@@ -59,6 +59,9 @@
         <div class="button-footer">
         </div>
         <div>
+          <form action="/card/{{ _id }}?_method=DELETE" method="POST">
+            <button type="submit" class="button btn-red">Löschen</button>
+          </form>
           <a href="/" class="button btn-blue">Abbruch</a>
           <button type="submit" class="button btn-green saveAndGo">Speichern</button>
         </div>
