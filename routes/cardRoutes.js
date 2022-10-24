@@ -9,66 +9,61 @@ const Cards = require('../models/cardsModel');
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
-router.get('/', middleware.redirectLogin, async (req, res, next) => {
-  const card = await Cards.findOne({ author: req.session.user._id });
-  if (!card) {
-    const payload = {
-      header: 'Mach Karte',
-      user: req.session.user,
-    }
-    console.log('Du hast noch keine Karten erstellt.');
-    payload.header = 'Mach neue Karte'
-    return res.render('newCard', payload);
-  }
+// router.get('/', middleware.redirectLogin, async (req, res, next) => {
+//   const card = await Cards.findOne({ author: req.session.user._id });
+//   if (!card) {
+//     const payload = {
+//       header: 'Mach Karte',
+//       user: req.session.user,
+//     }
+//     payload.header = 'Mach neue Karte'
+//     return res.render('newCard', payload);
+//   }
 
 
-  const cards = await Cards.find({ author: req.session.user._id }).lean();
+//   const cards = await Cards.find({ author: req.session.user._id }).lean();
   
-  const num = Math.floor(Math.random() * cards.length)
-  const randomCard = cards[num]
-  // console.log(cards);
-  // console.log(randomCard, cards.length);
-  const payload = {
-    header: 'Jetzt wird\'s ernst!',
-    user: req.session.user,
-    randomCard,
-    cat: req.params.cat
-  }
-  res.render('randomCardPage', payload);
-});
+//   const num = Math.floor(Math.random() * cards.length)
+//   const randomCard = cards[num]
+//   const payload = {
+//     header: 'Jetzt wird\'s ernst!',
+//     user: req.session.user,
+//     randomCard,
+//     cat: req.params.cat
+//   }
+//   res.render('randomCardPage', payload);
+// });
 
 router.get('/categories/:cat', middleware.redirectLogin, async (req, res, next) => {
-  const card = await Cards.findOne({ author: req.session.user._id });
-  if (req.params.cat) {
-    console.log(req.params.cat);
-  }
-  if (!card) {
+  const cat = req.params.cat;
+  if (cat === 'all') {
+    const cards = await Cards.find({ author: req.session.user._id }).lean();
+    const num = Math.floor(Math.random() * cards.length)
+    const randomCard = cards[num]
     const payload = {
-      header: 'Mach Karte',
+      header: 'Jetzt wird\'s ernst!',
       user: req.session.user,
+      randomCard,
+      cat: req.params.cat
     }
-    console.log('Du hast noch keine Karten erstellt.');
-    payload.header = 'Mach neue Karte'
-    return res.render('newCard', payload);
+    return res.render('randomCardPage', payload);
+      } else {
+    const cards = await Cards.find({
+      $and: [
+        { author: req.session.user._id },
+        { category: req.params.cat }
+      ]
+    }).lean();
+    const num = Math.floor(Math.random() * cards.length)
+    const randomCard = cards[num]
+    const payload = {
+      header: 'Jetzt wird\'s ernst!',
+      user: req.session.user,
+      cat: req.params.cat,
+      randomCard,
+    }
+    return res.render('randomCardPage', payload);
   }
-  const cards = await Cards.find({
-    $and: [
-      { author: req.session.user._id },
-      { category: req.params.cat }
-    ]
-  }).lean();
-  
-  const num = Math.floor(Math.random() * cards.length)
-  const randomCard = cards[num]
-  // console.log(cards);
-  // console.log(randomCard, cards.length);
-  const payload = {
-    header: 'Jetzt wird\'s ernst!',
-    user: req.session.user,
-    randomCard,
-    cat: req.params.cat
-  }
-  res.render('randomCardPage', payload);
 });
 
 router.post('/', async (req, res) => {
@@ -135,7 +130,6 @@ router.delete('/:id', async (req, res) => {
 })
 router.get('/newCard', async (req, res) => {
   const categories = await Cards.distinct('category');
-  console.log(categories);
   res.render('newCard', { layout: 'main', 
   header: '',
   user: req.session.user,
@@ -145,7 +139,6 @@ router.get('/newCard', async (req, res) => {
 
 router.get('/editCard/:id', async (req, res) => {
   const card = await Cards.findOne({ _id: req.params.id });
-  // console.log('card: ', card)
   res.render('editCard', {
     user: req.session.user,
     _id: card._id,

@@ -50,7 +50,7 @@ app.set('view engine', 'handlebars');
 
 app.get('/', middleware.redirectLogin, async (req, res, next) => {
   const card = await Cards.findOne({ author: req.session.user._id });
-  const categories = await Cards.distinct('category');
+  const categories = await Cards.distinct('category', { author: req.session.user._id});
 
   if (!card) {
     const randomCard = {
@@ -61,9 +61,9 @@ app.get('/', middleware.redirectLogin, async (req, res, next) => {
     const payload = {
       header: 'Mach Karte',
       user: req.session.user,
-      randomCard
+      randomCard,
+      link: '/card/newCard'
     }
-    console.log('Du hast noch keine Karten erstellt.');
     payload.header = 'Mach neue Karte'
     return res.render('home', payload);
   } else {
@@ -71,10 +71,10 @@ app.get('/', middleware.redirectLogin, async (req, res, next) => {
 
     const num = Math.floor(Math.random() * cards.length)
     const randomCard = cards[num]
-    // console.log(req.session.user);
     res.render('home', {
       header: 'Lernen mit PampelCards',
       user: req.session.user,
+      link: 'card/categories/all',
       randomCard,
       categories
     });

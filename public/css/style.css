@@ -204,10 +204,14 @@ button {
 
 
 .textarea {
-  background-color: #aaa;
-  color: #000;
+  background-color: #555;
+  color: #e9dfad;
   font-family: 'Quicksand', Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
+  padding: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
   width: 80%;
   height: 15rem;
 }
@@ -238,6 +242,18 @@ input.cardInput {
   width: 80%;
   font-family: 'Quicksand', Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
+}
+
+::-webkit-input-placeholder { /* Edge */
+  color: #aaa;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #aaa;
+}
+
+::placeholder {
+  color: #aaa;
 }
 
 @media (max-width: 1300px) {
@@ -280,25 +296,25 @@ input.cardInput {
  .home-content {
   font-size: 1.1rem;
   }
-}
-.textarea {
-  font-size: 1.1rem;
-  width: 80%;
-  height: 10rem;
-}
-
-.cardInput-container {
-  width: 55%;
-}
-
-.cardInputContainer {
-  margin-top: 1rem;
-}
-label.cardLabel {
-  font-size: 1.1rem;
-}
-input.cardInput {
-  width: 80%;
-  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
-  font-size: 1.1rem;
+  .textarea {
+    font-size: 1.1rem;
+    width: 80%;
+    height: 10rem;
+  }
+  
+  .cardInput-container {
+    width: 55%;
+  }
+  
+  .cardInputContainer {
+    margin-top: 1rem;
+  }
+  label.cardLabel {
+    font-size: 1.1rem;
+  }
+  input.cardInput {
+    width: 80%;
+    font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+  }
 }

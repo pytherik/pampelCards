@@ -6,8 +6,8 @@
     <div class="cardFormContainer">
       <form class="cardForm" action="/card" method="POST">
         <div class="cardInputContainer">
-          <label class="cardLabel" for="category">Kategorie</label><br>
-          <input class="cardInput" type="text" name="category" id="category" class="" list="categories" required>
+          {{!-- <label class="cardLabel" for="category">Kategorie</label><br> --}}
+          <input class="cardInput" type="text" name="category" id="category" placeholder="Kategorie" list="categories" required>
           <datalist id="categories">
             {{#each categories}}
             <option value="{{ this }}">{{ this }}</option>
@@ -15,16 +15,16 @@
           </datalist>
         </div>
         <div class="cardInputContainer">
-          <label class="cardLabel" for="question">Frage</label><br>
-          <input class="cardInput" type="text" name="question" id="question" class="" value="{{ question }}" required>
+          {{!-- <label class="cardLabel" for="question">Frage</label><br> --}}
+          <input class="cardInput" type="text" name="question" id="question" placeholder="Frage" value="{{ question }}" required>
         </div>
         <div class="cardInputContainer">
-          <label class="cardLabel" for="description">Beschreibung</label><br>
-          <input class="cardInput" type="text"  name="description" id="description" class="" value="{{ description }}">
+          {{!-- <label class="cardLabel" for="description">Beschreibung</label><br> --}}
+          <input class="cardInput" type="text"  name="description" id="description" placeholder="Beschreibung" value="{{ description }}">
         </div>
           <div class="cardInputContainer">
-            <label class="cardLabel" for="markdown">Antwort (md)</label><br>
-            <textarea class="textarea" name="answerMd" id="markdown">{{ answerMd }}</textarea>
+            {{!-- <label class="cardLabel" for="markdown">Antwort (md)</label><br> --}}
+            <textarea class="textarea" name="answerMd" id="markdown" placeholder="Eine ausführliche Definition (Markdown möglich)">{{ answerMd }}</textarea>
           </div>
         <div class="button-footer">
         </div>

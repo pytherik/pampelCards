@@ -6,15 +6,18 @@
       Hier kannst du, nach Kategorien georndnet, 
       mit deinen Flashcards lernen, neue Karten erstellen, usw.
     </p><br>
+    {{#if categories }}
     <h3>Kategorien:</h3>
     <ul>
+      <li class="categories"><a href="/card/categories/all">Alle</a></li>
     {{#each categories }}
       <li class="categories"><a href="/card/categories/{{ this }}">{{ this }}</a></li>
     {{/each }}
     </ul>
+    {{/if }}
   </div>
   <div class="home-content">
-    <a id="playNow" href="/card"><img id="flashcard" src="/images/icons/joker.svg" alt="Flashcard illustration"><br>Jetzt loslegen</a>
+    <a id="playNow" href="{{ link }}"><img id="flashcard" src="/images/icons/joker.svg" alt="Flashcard illustration"><br>Jetzt loslegen</a>
   </div>
   <div class="home-content">
     <h1 id="home-question">

@@ -18,7 +18,9 @@
           </li>
           <li class="nav-item"><a href="/">Willkommen {{ user.username }}</a></li>
           <li class="nav-item"><a href="/">Startseite</a></li>
+          {{#if categories}}
           <li class="nav-item"><a href="/card">Frag mich ab</a></li>
+          {{/if}}
           <li class="nav-item"><a href="/card/newCard">Neue Karte Erstellen</a></li>
           <li class="nav-item"><a href="/logout"><img class="logout-icon" src="/images/icons/logout2.png" alt=""></a></li>
         </ul>

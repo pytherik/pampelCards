@@ -1,33 +1,3 @@
-{{!-- <h1 class="mb-4">Bearbeiten</h1>
-<span class="errorMessage">{{ errorMessage }}</span>
-<div>
-  <form action="/card/{{ _id }}?_method=PUT" method="POST">
-    <div class="">
-    <label for="category">Kategorie</label>
-    <input type="text" name="category" id="category" class="" list="categories" value="{{category}}" required>
-    <datalist id="categories">
-      {{#each categories}}
-      <option value="{{ this }}">{{ this }}</option>
-      {{/each}}
-    </datalist>
-  </div>
-    <div class="">
-    <label for="question">Frage</label>
-    <input type="text" name="question" id="question" class="" value="{{ question }}" required>
-  </div>
-  <div class="">
-    <label for="description">Beschreibung</label>
-    <input type="text"  name="description" id="description" class="" value="{{ description }}">
-  </div>
-  <div class="">
-    <label for="markdown">Antwort (md)</label>
-    <textarea  name="answerMd" id="markdown">{{ answerMd }}</textarea>
-  </div>
-
-  <a href="/card" class="button btn-blue">Abbruch</a>
-  <button type="submit" class="button btn-green">Speichern</button>
-  </form>
-</div> --}}
  <div class="home-container">
   <div class="cardInput-container">
     <div>
@@ -36,8 +6,8 @@
     <div class="cardFormContainer">
   <form action="/card/{{ _id }}?_method=PUT" method="POST">
         <div class="cardInputContainer">
-          <label class="cardLabel" for="category">Kategorie</label><br>
-          <input class="cardInput" type="text" name="category" id="category" list="categories" value="{{ category }}" required>
+          {{!-- <label class="cardLabel" for="category">Kategorie</label><br> --}}
+          <input class="cardInput" type="text" name="category" id="category" list="categories" placeholder="Kategorie" value="{{ category }}" required>
           <datalist id="categories">
             {{#each categories}}
             <option value="{{ this }}">{{ this }}</option>
@@ -45,27 +15,27 @@
           </datalist>
         </div>
         <div class="cardInputContainer">
-          <label class="cardLabel" for="question">Frage</label><br>
-          <input class="cardInput" type="text" name="question" id="question" class="" value="{{ question }}" required>
+          {{!-- <label class="cardLabel" for="question">Frage</label><br> --}}
+          <input class="cardInput" type="text" name="question" id="question" placeholder="Frage" value="{{ question }}" required>
         </div>
         <div class="cardInputContainer">
-          <label class="cardLabel" for="description">Beschreibung</label><br>
-          <input class="cardInput" type="text"  name="description" id="description" class="" value="{{ description }}">
+          {{!-- <label class="cardLabel" for="description">Beschreibung</label><br> --}}
+          <input class="cardInput" type="text"  name="description" id="description" placeholder="Beschreibung" value="{{ description }}">
         </div>
           <div class="cardInputContainer">
-            <label class="cardLabel" for="markdown">Antwort (md)</label><br>
-            <textarea class="textarea" name="answerMd" id="markdown">{{ answerMd }}</textarea>
+            {{!-- <label class="cardLabel" for="markdown">Antwort (md)</label><br> --}}
+            <textarea class="textarea" name="answerMd" id="markdown" placeholder="Du musst hier schon irgendwas reinschreiben...">{{ answerMd }}</textarea>
           </div>
         <div class="button-footer">
         </div>
         <div>
-          <form action="/card/{{ _id }}?_method=DELETE" method="POST">
-            <button type="submit" class="button btn-red">Löschen</button>
-          </form>
-          <a href="/" class="button btn-blue">Abbruch</a>
+          <a href="/card/categories/{{ category }}" class="button btn-blue">Abbruch</a>
           <button type="submit" class="button btn-green saveAndGo">Speichern</button>
         </div>
-      </form>
+        </form>
+        <form action="/card/{{ _id }}?_method=DELETE" method="POST">
+          <button type="submit" class="button btn-red">Löschen</button>
+        </form>
     </div>
   </div>
 </div>
