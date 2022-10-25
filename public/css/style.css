@@ -98,9 +98,14 @@ hr.line {
   margin: 10px 0;
 }
 
-#card-category {
-  font-size: 1.1rem;
+#introQuest {
+  font-size: 1.5rem;
 }
+
+#card-category {
+  font-size: 1.5rem;
+}
+
 #playNow {
   font-size: 2rem;
   font-weight: 900;
@@ -114,10 +119,6 @@ hr.line {
 
 #logoutIcon {
   width: 40px;
-}
-
-#introQuest {
-  font-size: 1.2rem;
 }
 
 .index-container {
@@ -166,7 +167,7 @@ button {
 
 .button {
   font-family: 'Quicksand', Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 0.2em 0.5em;
   border: none;
   border-radius: 10%;
@@ -276,6 +277,14 @@ input.cardInput {
     font-size: 1.6rem
   }
 
+  #introQuest {
+    font-size: 1.2rem;
+  }
+  
+  #card-category {
+    font-size: 1.2rem;
+  }
+  
   .nav-bar {
     height: 40px;
   }

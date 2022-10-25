@@ -19,7 +19,13 @@
           <li class="nav-item"><a href="/">Willkommen {{ user.username }}</a></li>
           <li class="nav-item"><a href="/">Startseite</a></li>
           {{#if categories}}
-          <li class="nav-item"><a href="/card">Frag mich ab</a></li>
+          {{!-- <label for="learn">Frag mich ab</label> --}}
+          <select name="learn" id="learn">
+            <option value="all" selected><a href="/card/categories/all">Alle Kategorien</a></option>
+            {{#each categories}}
+            <option value="{{this}}"><a href="/card/categories/{{this}}">{{this}}</a></option>
+            {{/each}}
+          </select>
           {{/if}}
           <li class="nav-item"><a href="/card/newCard">Neue Karte Erstellen</a></li>
           <li class="nav-item"><a href="/logout"><img class="logout-icon" src="/images/icons/logout2.png" alt=""></a></li>
