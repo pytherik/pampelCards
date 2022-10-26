@@ -9,31 +9,6 @@ const Cards = require('../models/cardsModel');
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
-// router.get('/', middleware.redirectLogin, async (req, res, next) => {
-//   const card = await Cards.findOne({ author: req.session.user._id });
-//   if (!card) {
-//     const payload = {
-//       header: 'Mach Karte',
-//       user: req.session.user,
-//     }
-//     payload.header = 'Mach neue Karte'
-//     return res.render('newCard', payload);
-//   }
-
-
-//   const cards = await Cards.find({ author: req.session.user._id }).lean();
-  
-//   const num = Math.floor(Math.random() * cards.length)
-//   const randomCard = cards[num]
-//   const payload = {
-//     header: 'Jetzt wird\'s ernst!',
-//     user: req.session.user,
-//     randomCard,
-//     cat: req.params.cat
-//   }
-//   res.render('randomCardPage', payload);
-// });
-
 router.get('/categories/:cat', middleware.redirectLogin, async (req, res, next) => {
   const cat = req.params.cat;
   if (cat === 'all') {
@@ -83,7 +58,7 @@ router.post('/', async (req, res) => {
       data.author = req.session.user._id;
       data.knownBy = [];
       Cards.create(data);
-      return res.redirect('/card');
+      return res.redirect(`/card/categories/${data.category}`);
     } else {
       payload.errorMessage = 'Deine Frage existiert schon.';
       return res.render('newCard', payload)
@@ -118,7 +93,6 @@ router.put('/:id', async (req, res) => {
     }
     return res.redirect('/card');
   } else {
-    const errorMessage = 'Bitte fülle alle Felder aus!';
     return res.redirect(`/card/editCard/${req.params.id}`);
   }
 })
