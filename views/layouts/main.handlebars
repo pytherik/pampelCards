@@ -20,10 +20,10 @@
           <li class="nav-item"><a href="/">Startseite</a></li>
           {{#if categories}}
           {{!-- <label for="learn">Frag mich ab</label> --}}
-          <select name="learn" id="learn">
-            <option value="all" selected><a href="/card/categories/all">Alle Kategorien</a></option>
+          <select name="learn" id="learn" onChange="window.location.href=this.value">
+            <option value="/card/categories/all" selected>Alle Kategorien</option>
             {{#each categories}}
-            <option value="{{this}}"><a href="/card/categories/{{this}}">{{this}}</a></option>
+            <option value="/card/categories/{{this}}">{{ this }}</option>
             {{/each}}
           </select>
           {{/if}}

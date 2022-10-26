@@ -147,6 +147,7 @@ hr.line {
 .logout-icon {
   width: 50px;
 }
+
 .errorMessage {
   font-size: 1.3rem;
   color: #FF8787;
@@ -230,10 +231,12 @@ button {
 .cardInputContainer {
   margin-top: 2rem;
 }
+
 label.cardLabel {
   font-size: 1.5rem;
   text-align: left;
 }
+
 input.cardInput {
   background-color: transparent;
   color: #e9dfad;
@@ -245,6 +248,19 @@ input.cardInput {
   font-size: 1.5rem;
 }
 
+select {
+  background-color: transparent;
+  color: #e9dfad;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+
+option {
+  background: #444;
+}
 ::-webkit-input-placeholder { /* Edge */
   color: #aaa;
 }
@@ -318,12 +334,17 @@ input.cardInput {
   .cardInputContainer {
     margin-top: 1rem;
   }
+  
   label.cardLabel {
     font-size: 1.1rem;
   }
+  
   input.cardInput {
     width: 80%;
     font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+  }
+  select {
     font-size: 1.1rem;
   }
 }
