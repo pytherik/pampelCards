@@ -6,6 +6,13 @@
     <div class="cardFormContainer">
   <form action="/card/{{ _id }}?_method=PUT" method="POST">
         <div class="cardInputContainer">
+          <label class="privateLabel" for="private">Privat</label>
+          {{#if private}}
+          <input type="checkbox" id="private" name="private" value="true" checked>
+          {{else}}
+          <input type="checkbox" id="private" name="private" value="true">
+          {{/if}}
+          <br>
           {{!-- <label class="cardLabel" for="category">Kategorie</label><br> --}}
           <input class="cardInput" type="text" name="category" id="category" list="categories" placeholder="Kategorie" value="{{ category }}" required>
           <datalist id="categories">

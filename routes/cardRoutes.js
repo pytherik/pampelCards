@@ -18,8 +18,8 @@ router.get('/categories/:cat', middleware.redirectLogin, async (req, res, next) 
     const payload = {
       header: 'Jetzt wird\'s ernst!',
       user: req.session.user,
+      cat: req.params.cat,
       randomCard,
-      cat: req.params.cat
     }
     return res.render('randomCardPage', payload);
       } else {
@@ -77,6 +77,11 @@ router.put('/:id', async (req, res) => {
  
   if (category && question && answerMd) {  
     let card = await Cards.findById(req.params.id);
+    if (req.body.private) {
+      card.private = true;
+    } else {
+      card.private = false;
+    }
     card.category = category;
     card.question = question;
     card.description = description;
@@ -85,7 +90,7 @@ router.put('/:id', async (req, res) => {
     try {
       card = await card.save();
       console.log(card);
-      return res.redirect('/card');
+      return res.redirect(`/card/categories/${category}`);
     } 
     catch (err) {
       console.log(err);

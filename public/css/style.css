@@ -171,7 +171,8 @@ button {
   font-size: 1.2rem;
   padding: 0.2em 0.5em;
   border: none;
-  border-radius: 10%;
+  border-radius: .5rem;
+  font-weight: 900;
 }
 
 .btn-green {
@@ -245,6 +246,21 @@ input.cardInput {
   border-bottom: 1px solid #666;
   width: 80%;
   font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+
+input[type=checkbox] {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-left: 1rem;
+  border-radius: 50%;
+}
+
+.private {
+  background-color: #333;  
+}
+
+label.privateLabel {
   font-size: 1.5rem;
 }
 

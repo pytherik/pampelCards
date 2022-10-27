@@ -21,12 +21,12 @@
       <div class="button-footer">
         <a class="button btn-green" href="/card/newCard">Karte</a>
         <a class="button btn-blue" href="/card/editCard/{{randomCard._id}}">Edit</a>
-           {{#if cat }}
+           {{!-- {{#if cat }} --}}
         <a class="button btn-green" href="/card/categories/{{ cat }}">Okay</a>
-           {{else}}
-        <a class="button btn-green" href="/card">Okay</a>
-           {{/if }}
-        <a class="button btn-red" href="/card">Nope</a>
+           {{!-- {{else}} --}}
+        {{!-- <a class="button btn-green" href="card/categories/all">Okay</a> --}}
+           {{!-- {{/if }} --}}
+        <a class="button btn-red" href="/card/categories/{{ cat }}">Nope</a>
       </div>
     </div>
   </div>

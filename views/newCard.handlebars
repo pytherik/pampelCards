@@ -6,6 +6,9 @@
     <div class="cardFormContainer">
       <form class="cardForm" action="/card" method="POST">
         <div class="cardInputContainer">
+          <label class="privateLabel" for="private">Privat</label>
+          <input type="checkbox" id="private" name="private" value="true">
+          <br>
           {{!-- <label class="cardLabel" for="category">Kategorie</label><br> --}}
           <input class="cardInput" type="text" name="category" id="category" placeholder="Kategorie" list="categories" required>
           <datalist id="categories">

@@ -7,10 +7,20 @@
       mit deinen Flashcards lernen, neue Karten erstellen, usw.
     </p><br>
     {{#if categories }}
-    <h3>Kategorien:</h3>
+    <h3> Deine Kategorien:</h3>
     <ul>
       <li class="categories"><a href="/card/categories/all">Alle</a></li>
     {{#each categories }}
+      <li class="categories"><a href="/card/categories/{{ this }}">{{ this }}</a></li>
+    {{/each }}
+    </ul>
+    {{/if }}
+    {{#if allCategories }}
+    <hr class="line">
+    <h3> Alle Kategorien:</h3>
+    <ul>
+      <li class="categories"><a href="/card/categories/all">Alle</a></li>
+    {{#each allCategories }}
       <li class="categories"><a href="/card/categories/{{ this }}">{{ this }}</a></li>
     {{/each }}
     </ul>

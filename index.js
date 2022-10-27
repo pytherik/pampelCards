@@ -51,7 +51,8 @@ app.set('view engine', 'handlebars');
 app.get('/', middleware.redirectLogin, async (req, res, next) => {
   const card = await Cards.findOne({ author: req.session.user._id });
   const categories = await Cards.distinct('category', { author: req.session.user._id});
-
+  const allCategories = await Cards.distinct('category', { private: false });
+  
   if (!card) {
     const randomCard = {
       question: 'Du hast noch keine Sammlung!',
@@ -76,7 +77,8 @@ app.get('/', middleware.redirectLogin, async (req, res, next) => {
       user: req.session.user,
       link: 'card/categories/all',
       randomCard,
-      categories
+      categories,
+      allCategories
     });
   }
 });
