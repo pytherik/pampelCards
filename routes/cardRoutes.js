@@ -158,3 +158,15 @@ router.get('/list/:cat', async (req, res) => {
     return res.render('listView', payload);
   }
 });
+
+router.get('/detail/:id', async (req, res) => {
+  const card = await Cards.findOne({ _id: req.params.id }).lean()
+  if (!card) {
+    return console.log('keine Karte mit dieser Id!')
+  } 
+  const payload = {
+    user: req.session.user,
+    card
+  }
+  return res.render('detail', payload)
+}) 

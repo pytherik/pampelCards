@@ -4,17 +4,17 @@
     <div id="question-container" class="task-container">
       <div class="random-question">
         <hr class="card-line">
-        <h1 id="card-question">{{ this.question }}</h1>  
+        <h3 id="list-question">{{ this.question }}</h3>  
         <hr class="card-line">
         <span id="card-category">Kategorie: {{ this.category }}</span>
       </div>
       <div>
-      <h3 class="">{{ this.description }}</h3>
-      {{{ this.sanitizedHtml }}}
+      <h5 class="">{{ this.description }}</h5>
+      {{!-- {{{ this.sanitizedHtml }}} --}}
       </div>
     </div>
     <div class="button-footer">
-      <a class="button btn-blue" href="/card/newCard">zeig alles</a>
+      <a class="button btn-blue" href="/card/detail/{{this._id}}">zeig alles</a>
     </div>
   </div>
 </div>
