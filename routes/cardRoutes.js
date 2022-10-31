@@ -133,7 +133,7 @@ module.exports = router;
 router.get('/list/:cat', async (req, res) => {
   const cat = req.params.cat;
   if (cat === 'all') {
-    const cards = await Cards.find({ author: req.session.user._id }).lean();
+    const cards = await Cards.find({ author: req.session.user._id }).sort({ createdAt: -1 }).lean();
     const payload = {
       header: 'Alle',
       user: req.session.user,
@@ -148,7 +148,7 @@ router.get('/list/:cat', async (req, res) => {
         { author: req.session.user._id },
         { category: req.params.cat }
       ]
-    }).lean();
+    }).sort({ createdAt: -1 }).lean();
     const payload = {
       header: 'Alle',
       user: req.session.user,
