@@ -129,3 +129,32 @@ router.get('/editCard/:id', async (req, res) => {
 })
 
 module.exports = router;
+
+router.get('/list/:cat', async (req, res) => {
+  const cat = req.params.cat;
+  if (cat === 'all') {
+    const cards = await Cards.find({ author: req.session.user._id }).lean();
+    const payload = {
+      header: 'Alle',
+      user: req.session.user,
+      cat: req.params.cat,
+      cards,
+    }
+    return res.render('listView', payload);
+  } else {
+    
+    const cards = await Cards.find({
+      $and: [
+        { author: req.session.user._id },
+        { category: req.params.cat }
+      ]
+    }).lean();
+    const payload = {
+      header: 'Alle',
+      user: req.session.user,
+      cat: req.params.cat,
+      cards,
+    }
+    return res.render('listView', payload);
+  }
+});

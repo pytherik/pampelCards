@@ -13,6 +13,8 @@ body {
   /* background-image: url('../images/busts-gf81f42c0f_1920.jpg'); */
   /* background-image: url('../images/age-g31c25d880_1920.jpg'); */
   background-image: url('../images/books-gd1abeb1c9_1920_blur.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: #e9dfad;
   font-family: 'Quicksand', monospace, sans-serif;
 }
@@ -78,6 +80,11 @@ a:hover {
 
 .card-container {
   width: 35%;
+  background-color: #216778e0;
+}
+
+.cardList-container {
+  width: 45%;
   background-color: #216778e0;
 }
 
