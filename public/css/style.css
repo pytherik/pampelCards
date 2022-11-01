@@ -19,16 +19,18 @@ body {
   font-family: 'Quicksand', monospace, sans-serif;
 }
 
+
 .nav-bar {
   background-color: #5e755e88;
-  position: relative;
-  margin-top: 0;
+  position: fixed;
+  top: 0;
   padding: 0 1% 0 0;
   width: 100%;
-  height: 70px;
+  /* height: 5rem; */
 }
 
 .header {
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
 }
