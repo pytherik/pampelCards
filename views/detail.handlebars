@@ -4,16 +4,23 @@
       <div class="random-question">
         <hr class="card-line">
         <h1 id="card-question">{{ card.question }}</h1>  
+        <h5 class="card-description">{{ card.description }}</h5>
         <hr class="card-line">
         <span id="card-category">Kategorie: {{ card.category }}</span>
       </div>
       <div>
-      <h5 class="">{{ card.description }}</h5>
       {{{ card.sanitizedHtml }}}
       </div>
     </div>
     <div class="button-footer">
-      <a class="button btn-blue" href="/card/list/{{card.category}}">zurück</a>
+      <a class="button btn-blue" href="/card/list/{{card.category}}">Liste</a>
+      <a class="button btn-green" href="/card/categories/{{card.category}}">lernen</a>
+      {{#if isAuthor }}
+      <a class="button btn-green" href="/card/editCard/{{card._id}}">Bearbeiten</a>
+      <form class="delete-form" action="/card/{{ card._id }}?_method=DELETE" method="POST">
+        <button type="submit" class="button btn-red">Löschen</button>
+      </form>
+   {{/if }}
     </div>
   </div>
 </div>

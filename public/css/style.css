@@ -2,11 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Red+Hat+Mono&display=swap');
 
+:root {
+  --bright-font: #e9dfad;
+  --nav-bg: #5e755e88;
+  --card-bg: #216778e0;
+  --container-bg:  #21677888;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 
 body {
   background-color: #666;
@@ -15,13 +23,13 @@ body {
   background-image: url('../images/books-gd1abeb1c9_1920_blur.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
-  color: #e9dfad;
+  color: var(--bright-font);
   font-family: 'Quicksand', monospace, sans-serif;
 }
 
 
 .nav-bar {
-  background-color: #5e755e88;
+  background-color: var(--nav-bg);
   position: fixed;
   top: 0;
   padding: 0 1% 0 0;
@@ -53,7 +61,7 @@ li.nav-item {
 
 a {
   text-decoration: none;
-  color: #e9dfad;
+  color: var(--bright-font);
 }
 
 a:hover {
@@ -69,10 +77,10 @@ a:hover {
 
 .card-container,
 .home-content {
-  background-color: #21677888;
+  background-color: var(--container-bg);
   font-size: 1.3rem;
   text-align: center;
-  padding: 1%;
+  padding: 2%;
   width: 25%;
   /* height: 75vH; */
   border: 1px solid #444;
@@ -81,13 +89,14 @@ a:hover {
 }
 
 .card-container {
-  width: 35%;
-  background-color: #216778e0;
+  text-align: left;
+  width: 45%;
+  background-color: var(--card-bg);
 }
 
 .cardList-container {
   width: 45%;
-  background-color: #216778e0;
+  background-color: var(--card-bg);
 }
 
 .task-container {
@@ -103,6 +112,7 @@ hr.line {
   width: 80%;
   margin: 0 auto;
 }
+
 #card-question {
   margin: 10px 0;
 }
@@ -163,10 +173,16 @@ hr.line {
 }
 
 .random-question {
+  text-align: center;
   margin: 5% 0;
 }
 
+.card-description {
+  text-align: center;
+  color: #fff;
+}
 .button-footer {
+  text-align: center;
   margin-top: 3%;
 }
 
@@ -217,7 +233,7 @@ button {
 
 .textarea {
   background-color: #555;
-  color: #e9dfad;
+  color: var(--bright-font);
   font-family: 'Quicksand', Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
   padding: 5px;
@@ -249,7 +265,7 @@ label.cardLabel {
 
 input.cardInput {
   background-color: transparent;
-  color: #e9dfad;
+  color: var(--bright-font);
   outline: none;
   border: none;
   border-bottom: 1px solid #666;
@@ -275,7 +291,7 @@ label.privateLabel {
 
 select {
   background-color: transparent;
-  color: #e9dfad;
+  color: var(--bright-font);
   outline: none;
   border: none;
   border-bottom: 1px solid #666;
@@ -296,6 +312,10 @@ option {
 
 ::placeholder {
   color: #aaa;
+}
+
+.delete-form {
+  display: inline-block;
 }
 
 @media (max-width: 1300px) {

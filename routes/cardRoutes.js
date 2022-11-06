@@ -11,18 +11,16 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 router.get('/categories/:cat', middleware.redirectLogin, async (req, res, next) => {
   const cat = req.params.cat;
+  const user = req.session.user;
+  const header = 'Prüfe dein Wissen!';
+  const payload = { header, user, cat };
+
   if (cat === 'all') {
     const cards = await Cards.find({ author: req.session.user._id }).lean();
     const num = Math.floor(Math.random() * cards.length)
-    const randomCard = cards[num]
-    const payload = {
-      header: 'Jetzt wird\'s ernst!',
-      user: req.session.user,
-      cat: req.params.cat,
-      randomCard,
-    }
-    return res.render('randomCardPage', payload);
-      } else {
+    payload.randomCard = cards[num];
+  }
+  else {
     const cards = await Cards.find({
       $and: [
         { author: req.session.user._id },
@@ -30,26 +28,19 @@ router.get('/categories/:cat', middleware.redirectLogin, async (req, res, next) 
       ]
     }).lean();
     const num = Math.floor(Math.random() * cards.length)
-    const randomCard = cards[num]
-    const payload = {
-      header: 'Jetzt wird\'s ernst!',
-      user: req.session.user,
-      cat: req.params.cat,
-      randomCard,
-    }
-    return res.render('randomCardPage', payload);
-  }
+    payload.randomCard = cards[num];
+  }  
+  
+  payload.isAuthor = user._id == payload.randomCard._id;
+  
+  return res.render('randomCardPage', payload);
 });
 
 router.post('/', async (req, res) => {
   const category = req.body.category;
   const question = req.body.question;
   const answerMd = req.body.answerMd;
-  const payload = {
-    category: category,
-    question: question,
-    answerMd: answerMd
-  };
+  const payload = { category, question, answerMd };
   
   if (category && question && answerMd) {
     const quest = await Cards.findOne({ question: question});
@@ -57,8 +48,8 @@ router.post('/', async (req, res) => {
       const data = req.body;
       data.author = req.session.user._id;
       data.knownBy = [];
-      Cards.create(data);
-      return res.redirect(`/card/categories/${data.category}`);
+      const newCard = await Cards.create(data);
+      return res.redirect(`/card/detail/${newCard._id}`);
     } else {
       payload.errorMessage = 'Deine Frage existiert schon.';
       return res.render('newCard', payload)
@@ -90,7 +81,7 @@ router.put('/:id', async (req, res) => {
     try {
       card = await card.save();
       console.log(card);
-      return res.redirect(`/card/categories/${category}`);
+      return res.redirect(`/card/detail/${card._id}`);
     } 
     catch (err) {
       console.log(err);
@@ -109,17 +100,24 @@ router.delete('/:id', async (req, res) => {
 })
 router.get('/newCard', async (req, res) => {
   const categories = await Cards.distinct('category');
-  res.render('newCard', { layout: 'main', 
-  header: '',
-  user: req.session.user,
-  categories: categories
-});
+  const user = req.session.user;
+  res.render('newCard', { user, categories });
+//   res.render('newCard', { layout: 'main', 
+//   header: '',
+//   user: req.session.user,
+//   categories: categories
+// });
 })
 
 router.get('/editCard/:id', async (req, res) => {
   const card = await Cards.findOne({ _id: req.params.id });
+  const categories = await Cards.distinct('category');
+  const user = req.session.user;
+  const payload = { card, user, categories };
+  // res.render('editCard', { user, card });
   res.render('editCard', {
-    user: req.session.user,
+    user,
+    categories,
     _id: card._id,
     category: card.category,
     question: card.question,
@@ -128,35 +126,27 @@ router.get('/editCard/:id', async (req, res) => {
   });
 })
 
-module.exports = router;
 
 router.get('/list/:cat', async (req, res) => {
   const cat = req.params.cat;
+  const user = req.session.user;
+  const header = cat;
+  const payload = { header, user, cat };
   if (cat === 'all') {
-    const cards = await Cards.find({ author: req.session.user._id }).sort({ createdAt: -1 }).lean();
-    const payload = {
-      header: 'Alle',
-      user: req.session.user,
-      cat: req.params.cat,
-      cards,
-    }
-    return res.render('listView', payload);
-  } else {
-    
+    const cards = await Cards.find({ author: req.session.user._id }).sort({ updatedAt: -1 }).lean();
+    payload.cards = cards;
+  }
+  else {    
     const cards = await Cards.find({
       $and: [
         { author: req.session.user._id },
         { category: req.params.cat }
       ]
-    }).sort({ createdAt: -1 }).lean();
-    const payload = {
-      header: 'Alle',
-      user: req.session.user,
-      cat: req.params.cat,
-      cards,
-    }
-    return res.render('listView', payload);
+    }).sort({ updatedAt: -1 }).lean();
+    payload.cards = cards;
   }
+
+  return res.render('listView', payload);
 });
 
 router.get('/detail/:id', async (req, res) => {
@@ -164,9 +154,15 @@ router.get('/detail/:id', async (req, res) => {
   if (!card) {
     return console.log('keine Karte mit dieser Id!')
   } 
+  const isAuthor = card.author == req.session.user._id
   const payload = {
     user: req.session.user,
+    isAuthor,
     card
   }
+  console.log("details: ", card)
+  console.log("is author: ", isAuthor)
   return res.render('detail', payload)
 }) 
+
+module.exports = router;

@@ -38,11 +38,11 @@
         <div>
           <a href="/card/categories/{{ category }}" class="button btn-blue">Abbruch</a>
           <button type="submit" class="button btn-green saveAndGo">Speichern</button>
-        </div>
         </form>
-        <form action="/card/{{ _id }}?_method=DELETE" method="POST">
+        <form class="delete-form" action="/card/{{ _id }}?_method=DELETE" method="POST">
           <button type="submit" class="button btn-red">Löschen</button>
         </form>
+        </div>
     </div>
   </div>
 </div>
