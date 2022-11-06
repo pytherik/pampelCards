@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-  <div class="header">
+  {{!-- <div class="header"> --}}
     <nav>
       <div class="nav-bar">
         <ul class="nav-list">
@@ -18,17 +18,25 @@
           </li>
           <li class="nav-item"><a href="/">Willkommen {{ user.username }}</a></li>
           <li class="nav-item"><a href="/">Startseite</a></li>
-          <li class="nav-item"><a href="/card">Frag mich ab</a></li>
+          {{#if categories}}
+          {{!-- <label for="learn">Frag mich ab</label> --}}
+          <select name="learn" id="learn" onChange="window.location.href=this.value">
+            <option value="/card/categories/all" selected>Alle Kategorien</option>
+            {{#each categories}}
+            <option value="/card/categories/{{this}}">{{ this }}</option>
+            {{/each}}
+          </select>
+          {{/if}}
           <li class="nav-item"><a href="/card/newCard">Neue Karte Erstellen</a></li>
           <li class="nav-item"><a href="/logout"><img class="logout-icon" src="/images/icons/logout2.png" alt=""></a></li>
         </ul>
       </div>
     </nav>
-    <div>
+    <div class="header">
       <h1 id="welcome">{{ header }}</h1>
       <hr class="line">
     </div>
-  </div>
+  {{!-- </div> --}}
       
   {{{body}}}
     

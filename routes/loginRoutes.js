@@ -24,13 +24,12 @@ router.post('/', middleware.redirectHome, async (req, res, next) => {
         payload.errorMessage = "Irgendwas stimmt hier nicht!";
         res.status(200).render("login", { layout: 'loginLayout', payload });
       });
-    // console.log(user)
-    // console.log(req.body.password)
     if (user != null) {
       const result = await bcrypt.compare(req.body.password, user.password);
       
       if (result === true) {
         req.session.user = user;
+        const userLoggedIn = req.session.user;
         return res.redirect("/");
       }
     }

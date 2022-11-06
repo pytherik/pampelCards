@@ -15,7 +15,8 @@ const CardsSchema = new Schema({
   slug:          { type: String, required: true, unique: true },
   answerMd:      { type: String, required: true },
   sanitizedHtml: { type: String, required: true },
-  knownBy:      [{ type: Schema.Types.ObjectId, ref: 'CardsUser' }],
+  knownBy: [{ type: Schema.Types.ObjectId, ref: 'CardsUser' }],
+  private: { type: Boolean, default: false },
 }, { timestamps: true });
 
 CardsSchema.pre('validate', function (next) {

@@ -1,0 +1,21 @@
+{{#each cards}}
+<div class="home-container">
+  <div class="card-container">
+    <div id="question-container" class="task-container">
+      <div class="random-question">
+        <hr class="card-line">
+        <h3 id="list-question">{{ this.question }}</h3>  
+        <h5 class="card-description">{{ this.description }}</h5>
+        <hr class="card-line">
+        <span id="card-category">Kategorie: {{ this.category }}</span>
+      </div>
+      <div>
+      {{!-- {{{ this.sanitizedHtml }}} --}}
+      </div>
+    </div>
+    <div class="button-footer">
+      <a class="button btn-blue" href="/card/detail/{{this._id}}">zeig alles</a>
+    </div>
+  </div>
+</div>
+{{/each}}

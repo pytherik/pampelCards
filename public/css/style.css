@@ -2,31 +2,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Red+Hat+Mono&display=swap');
 
+:root {
+  --bright-font: #e9dfad;
+  --nav-bg: #5e755e88;
+  --card-bg: #216778e0;
+  --container-bg:  #21677888;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+
 body {
   background-color: #666;
   /* background-image: url('../images/busts-gf81f42c0f_1920.jpg'); */
   /* background-image: url('../images/age-g31c25d880_1920.jpg'); */
   background-image: url('../images/books-gd1abeb1c9_1920_blur.jpg');
-  color: #e9dfad;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: var(--bright-font);
   font-family: 'Quicksand', monospace, sans-serif;
 }
 
+
 .nav-bar {
-  background-color: #5e755e88;
-  position: relative;
-  margin-top: 0;
+  background-color: var(--nav-bg);
+  position: fixed;
+  top: 0;
   padding: 0 1% 0 0;
   width: 100%;
-  height: 70px;
+  /* height: 5rem; */
 }
 
 .header {
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
 }
@@ -49,7 +61,7 @@ li.nav-item {
 
 a {
   text-decoration: none;
-  color: #e9dfad;
+  color: var(--bright-font);
 }
 
 a:hover {
@@ -65,10 +77,10 @@ a:hover {
 
 .card-container,
 .home-content {
-  background-color: #21677888;
+  background-color: var(--container-bg);
   font-size: 1.3rem;
   text-align: center;
-  padding: 1%;
+  padding: 2%;
   width: 25%;
   /* height: 75vH; */
   border: 1px solid #444;
@@ -77,8 +89,14 @@ a:hover {
 }
 
 .card-container {
-  width: 35%;
-  background-color: #216778e0;
+  text-align: left;
+  width: 45%;
+  background-color: var(--card-bg);
+}
+
+.cardList-container {
+  width: 45%;
+  background-color: var(--card-bg);
 }
 
 .task-container {
@@ -94,13 +112,19 @@ hr.line {
   width: 80%;
   margin: 0 auto;
 }
+
 #card-question {
   margin: 10px 0;
 }
 
-#card-category {
-  font-size: 1.1rem;
+#introQuest {
+  font-size: 1.5rem;
 }
+
+#card-category {
+  font-size: 1.5rem;
+}
+
 #playNow {
   font-size: 2rem;
   font-weight: 900;
@@ -114,10 +138,6 @@ hr.line {
 
 #logoutIcon {
   width: 40px;
-}
-
-#introQuest {
-  font-size: 1.2rem;
 }
 
 .index-container {
@@ -146,16 +166,23 @@ hr.line {
 .logout-icon {
   width: 50px;
 }
+
 .errorMessage {
   font-size: 1.3rem;
   color: #FF8787;
 }
 
 .random-question {
+  text-align: center;
   margin: 5% 0;
 }
 
+.card-description {
+  text-align: center;
+  color: #fff;
+}
 .button-footer {
+  text-align: center;
   margin-top: 3%;
 }
 
@@ -166,10 +193,11 @@ button {
 
 .button {
   font-family: 'Quicksand', Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 0.2em 0.5em;
   border: none;
-  border-radius: 10%;
+  border-radius: .5rem;
+  font-weight: 900;
 }
 
 .btn-green {
@@ -204,10 +232,14 @@ button {
 
 
 .textarea {
-  background-color: #aaa;
-  color: #000;
+  background-color: #555;
+  color: var(--bright-font);
   font-family: 'Quicksand', Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
+  padding: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
   width: 80%;
   height: 15rem;
 }
@@ -225,19 +257,65 @@ button {
 .cardInputContainer {
   margin-top: 2rem;
 }
+
 label.cardLabel {
   font-size: 1.5rem;
   text-align: left;
 }
+
 input.cardInput {
   background-color: transparent;
-  color: #e9dfad;
+  color: var(--bright-font);
   outline: none;
   border: none;
   border-bottom: 1px solid #666;
   width: 80%;
   font-family: 'Quicksand', Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
+}
+
+input[type=checkbox] {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-left: 1rem;
+  border-radius: 50%;
+}
+
+.private {
+  background-color: #333;  
+}
+
+label.privateLabel {
+  font-size: 1.5rem;
+}
+
+select {
+  background-color: transparent;
+  color: var(--bright-font);
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+
+option {
+  background: #444;
+}
+::-webkit-input-placeholder { /* Edge */
+  color: #aaa;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #aaa;
+}
+
+::placeholder {
+  color: #aaa;
+}
+
+.delete-form {
+  display: inline-block;
 }
 
 @media (max-width: 1300px) {
@@ -260,6 +338,14 @@ input.cardInput {
     font-size: 1.6rem
   }
 
+  #introQuest {
+    font-size: 1.2rem;
+  }
+  
+  #card-category {
+    font-size: 1.2rem;
+  }
+  
   .nav-bar {
     height: 40px;
   }
@@ -280,25 +366,30 @@ input.cardInput {
  .home-content {
   font-size: 1.1rem;
   }
-}
-.textarea {
-  font-size: 1.1rem;
-  width: 80%;
-  height: 10rem;
-}
-
-.cardInput-container {
-  width: 55%;
-}
-
-.cardInputContainer {
-  margin-top: 1rem;
-}
-label.cardLabel {
-  font-size: 1.1rem;
-}
-input.cardInput {
-  width: 80%;
-  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
-  font-size: 1.1rem;
+  .textarea {
+    font-size: 1.1rem;
+    width: 80%;
+    height: 10rem;
+  }
+  
+  .cardInput-container {
+    width: 55%;
+  }
+  
+  .cardInputContainer {
+    margin-top: 1rem;
+  }
+  
+  label.cardLabel {
+    font-size: 1.1rem;
+  }
+  
+  input.cardInput {
+    width: 80%;
+    font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+  }
+  select {
+    font-size: 1.1rem;
+  }
 }
