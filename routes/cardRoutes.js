@@ -135,6 +135,7 @@ router.get('/list/:cat', async (req, res) => {
   if (cat === 'all') {
     const cards = await Cards.find({ author: req.session.user._id }).sort({ updatedAt: -1 }).lean();
     payload.cards = cards;
+    payload.header = 'Alle Kategorien';
   }
   else {    
     const cards = await Cards.find({
